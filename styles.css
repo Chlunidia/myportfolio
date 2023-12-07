@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@800&family=Titan+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@800&display=swap");
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #ffc3de;
+}
+
+.section-title {
+    font-family: 'Lexend', sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+.section-1 {
+    background: linear-gradient(to bottom, #ffc3de, #ffc3de, #ffc3de, #f8eeec);
+    padding: 20px;
+}
+
+.section-2 {
+    background: linear-gradient(to bottom, #f8eeec, #f8eeec, #f8eeec, #ffc3de);
+    padding: 20px;
+}
+
+.achievements {
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+}
+
+.certificate-card {
+    flex: 0 0 auto;
+    width: 320px;
+    height: auto;
+    margin-right: 20px;
+    scroll-snap-align: start;
+    position: relative;
+    perspective: 1000px;
+}
+
+.certificate-card:hover .certificate-img {
+    transform: rotateY(20deg);
+}
+
+.certificate-img {
+    width: 320px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.certificate-card:not(:last-child) {
+    margin-right: 20px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #f8eeec;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    border: 2px solid black;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.modal-content {
+    width: 700px;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: relative;
+    background-color: #f8eeec;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.modal-container {
+    text-align: center;
+}
+
+.modal-title {
+    font-family: 'Lexend', sans-serif;
+    font-size: 24px;
+    margin: 0;
+}
+
+.modal-image-container {
+    max-width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+
+.modal-img {
+    width: 100%;
+    height: auto;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #000;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.button-container {
+    position: absolute;
+    top: 480px;
+    left: 650px;
+    z-index: 1;
+    display: flex;
+    gap: 10px;
+}
+
+.custom-button {
+    padding: 8px 16px;
+    border: 2px solid black;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 3px 3px 0 black;
+    background-color: #ffc3de;
+    color: black;
+    font-family: 'Lexend', sans-serif;
+    white-space: nowrap;
+}
+
+.custom-button:hover {
+    transform: translateY(3px);
+    box-shadow: 0 0 0 black;
+}
+
+.home-img {
+    padding: 20px;
+    width: 1000px;
+    height: auto;
+    display: block;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0;
+    background-color: #f8eeec;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 70px;
+    height: auto;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.logo-heading {
+    font-family: 'Lexend', sans-serif;
+    font-size: 24px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    font-family: 'Lexend', sans-serif;
+    font-size: 20px;
+}
+
+.nav-links li {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-links .button-text {
+    padding: 8px 16px;
+    border: 2px solid black;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 3px 3px 0 black;
+    background-color: #e85c3b;
+}
+
+.nav-links .button-text:hover {
+    transform: translateY(3px);
+    box-shadow: 0 0 0 black;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.footer-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.acc a i {
+    font-size: 24px;
+    color: white;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #25B418;
+    padding: 6px;
+    text-align: center;
+}
+
+.grand-finale {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: white;
+}
+
+.about-section {
+    padding: 20px;
+    background: linear-gradient(to bottom, #f8eeec, #ffc3de, #ffc3de, #ffc3de,);
+}
+
+.education-section,
+.skills-section {
+    margin-bottom: 20px;
+}
+
+.skills-section h2 {
+    font-size: 32px;
+    font-family: 'Lexend', sans-serif;
+    margin-bottom: 20px;
+}
+
+.education-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.education-section li {
+    font-size: 18px;
+    font-family: 'Lexend', sans-serif;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.education-section li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -15px; 
+    height: 100%;
+    width: 1px;
+    background-color: #000; 
+}
+
+.skills-section .skill {
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: 'Lexend', sans-serif;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px;
+    width: 70%;
+    margin: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+    }
+
+    .button-container {
+        top: auto;
+        left: auto;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+        flex-direction: column;
+    }
+
+    .custom-button {
+        white-space: normal;
+        margin-top: 10px;
+    }
+
+    .home-img {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 480px) {
+    .menu-toggle {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #f8eeec;
+        border-top: 2px solid black;
+        z-index: 1;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+        text-align: center;
+    }
+    
+    .button-container {
+        top: auto;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+        flex-direction: column;
+    }
+
+    .custom-button {
+        white-space: normal;
+        margin-top: 10px;
+    }
+
+    .home-img {
+        width: 100%;
+        height: auto;
+        max-width: none;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .menu-toggle {
+        margin-right: 10px;
+    }
+
+    .nav-links.mobile {
+        top: 60px; 
+    }
+
+    .nav-links.mobile li {
+        margin: 10px 0;
+    }
+
+    .button-container {
+        top: auto;
+        bottom: 20px;
+        right: 50%;
+        transform: translateX(50%);
+        flex-direction: column;
+    }
+
+    .custom-button {
+        white-space: normal;
+        margin-top: 10px;
+    }
+
+    .home-img {
+        width: 100%;
+        height: auto;
+        max-width: none;
+        margin-left: 20px;
+        margin-right: 20px;
+        display: block;
+    }
+}
