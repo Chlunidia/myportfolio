@@ -487,13 +487,13 @@ svg {
 
 .contact-form {
     position: relative;
-    min-height: 100vh;
+    min-height: 50vh;
     z-index: 0;
-    padding: 30px;
+    padding: 10px;
     justify-content: center;
     display: grid;
     grid-template-columns: 1fr;
-    align-items: center;
+    align-content: space-evenly;
 }
 
 .contact-main {
@@ -501,6 +501,7 @@ svg {
     grid-template-columns: 1fr 1fr;
     background-color: #F9F0DF;
     border-radius: 15px;
+    margin: 40px;
     overflow: hidden;
     border: 2px solid black;
 }
@@ -510,7 +511,6 @@ svg {
     padding: 3em;
     box-shadow: 2px 9px -17px rgba(0, 0, 0, 0.05);
     border-radius: 8px;
-    margin-bottom: 20px;
 }
 
 .contact-img {
@@ -518,20 +518,21 @@ svg {
     padding: 40px;
     border-radius: 8px;
     align-items: center;
+    justify-content: center;
     display: grid;
 }
 
 .contact-img img {
-    max-width: 100%;
+    max-width: 80%;
 }
 
 .contact-form input,
 .contact-form textarea {
     outline: 2px solid #000;
-    margin-top: 10px;
+    margin-top: 5px;
     font-size: 16px;
     color: #666;
-    padding: 14px 20px;
+    padding: 10px;
     width: 100%;
     box-sizing: border-box;
     border: none;
@@ -556,4 +557,47 @@ svg {
     padding: 14px 15px;
     border-radius: 35px;
     cursor: pointer;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.portfolio-card {
+    width: 300px;
+    margin: 20px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #F9F0DF;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-img {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+}
+
+.portfolio-details {
+    padding: 15px;
+}
+
+.project-title {
+    font-family: 'Lexend', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-family: 'Lexend', sans-serif;
+    font-size: 14px;
+    color: #666;
 }
