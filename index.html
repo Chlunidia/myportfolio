@@ -21,39 +21,66 @@
     <section class="section-2" id="section-2">
         <h1 class="section-title">Achievements</h1>
         <div class="achievements">
-            <div class="slider-container">
-                <div class="certificate-card">
-                    <img class="certificate-img" src="assets/sertif/sertif-1.jpg" alt="Certificate 1">
-                </div>
-                <div class="certificate-card">
-                    <img class="certificate-img" src="assets/sertif/sertif-2.jpg" alt="Certificate 2">
-                </div>
-                <div class="certificate-card">
-                    <img class="certificate-img" src="assets/sertif/sertif-3.jpg" alt="Certificate 3">
-                </div>
-                <div class="certificate-card">
-                    <img class="certificate-img" src="assets/sertif/sertif-4.jpg" alt="Certificate 4">
+            <div class="certificate-slider-container">
+                <div class="certificate-slider">
+                    <div class="certificate-card">
+                        <div class="certificate-img-container">
+                            <img class="certificate-img" src="assets/sertif/sertif-4.jpg" alt="Certificate 4">
+                        </div>
+                        <div class="certificate-details">
+                            <h3 class="certificate-title">Memulai Pemrograman dengan Kotlin (Dicoding Indonesia)</h3>
+                            <p class="certificate-description">Description of Certificate 1.</p>
+                        </div>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-img-container">
+                            <img class="certificate-img" src="assets/sertif/sertif-3.jpg" alt="Certificate 3">
+                        </div>
+                        <div class="certificate-details">
+                            <h3 class="certificate-title">Gold Medal PKMM AST-PTMA</h3>
+                            <p class="certificate-description">Description of Certificate 1.</p>
+                        </div>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-img-container">
+                            <img class="certificate-img" src="assets/sertif/sertif-2.jpg" alt="Certificate 2">
+                        </div>
+                        <div class="certificate-details">
+                            <h3 class="certificate-title">Bronze Medal PKMM AST-PTMA</h3>
+                            <p class="certificate-description">Description of Certificate 1.</p>
+                        </div>
+                    </div>
+                    <div class="certificate-card">
+                        <div class="certificate-img-container">
+                            <img class="certificate-img" src="assets/sertif/sertif-1.jpg" alt="Certificate 1">
+                        </div>
+                        <div class="certificate-details">
+                            <h3 class="certificate-title">Participants of INVFEST 7.0 Competition</h3>
+                            <p class="certificate-description">I received this certificate for participating in a
+                                software development competition organized by Telkom University Purwokerto, called
+                                INVFEST 7.0, in 2022. This was my team's first competition, but unfortunately, we didn't
+                                win. So, this serves as a participant certificate. While we didn't secure a victory in
+                                our first competition, the experience was valuable, and we learned a lot from the
+                                challenges faced during the event.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
         <div class="overlay"></div>
-        <div class="modal">
+        <div class="modal-container">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title">Certificate Details</h2>
-                    <span class="close-modal">&times;</span>
-                </div>
-                <div class="modal-container">
-                    <div class="modal-image-container">
-                        <img class="modal-img" src="" alt="Certificate">
-                    </div>
+                <span class="close-modal" onclick="closeCertificateModal()">&times;</span>
+                <div class="modal-details">
+                    <h3 class="modal-title"></h3>
+                    <img class="modal-img" src="" alt="Certificate Image">
+                    <p class="modal-description"></p>
                 </div>
             </div>
         </div>
     </section>
     <div id="footer-container"></div>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>

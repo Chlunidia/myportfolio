@@ -28,41 +28,78 @@ body {
     text-align: center;
 }
 
-.achievements {
-    overflow: hidden;
+.certificate-slider-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
 }
 
-.slider-container {
+.certificate-slider {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    width: 100%;
+    max-width: 100%;
 }
 
 .certificate-card {
-    flex: 0 0 auto;
     width: 320px;
-    height: auto;
-    margin-right: 20px;
-    scroll-snap-align: start;
-    position: relative;
-    perspective: 1000px;
+    height: 320px;
+    margin: 20px;
+    flex: 0 0 auto;
+    border: 2px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #F9F0DF;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
 }
 
-.certificate-card:hover .certificate-img {
-    transform: rotateY(20deg);
+.certificate-card:hover {
+    transform: scale(1.05);
 }
 
 .certificate-img {
-    width: 320px;
+    width: 100%;
     height: auto;
-    transition: transform 0.3s ease-in-out;
+    margin: 10px;
+    border: 2px solid #000;
+    max-height: 200px; 
+    border-radius: 10px;
+    align-self: center;
 }
 
-.certificate-card:not(:last-child) {
-    margin-right: 20px;
+.certificate-img-container {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
+.certificate-details {
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+}
+
+.certificate-title {
+    font-family: 'Lexend', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.certificate-description {
+    font-family: 'Lexend', sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* Modal Styles */
 .overlay {
     display: none;
     position: fixed;
@@ -74,62 +111,32 @@ body {
     z-index: 2;
 }
 
-.modal {
+.modal-container {
+    width: 85%; 
+    max-width: 700px; 
+    height: 80vh;
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
-    background-color: #f8eeec;
-    z-index: 3;
     transform: translate(-50%, -50%);
-    justify-content: center;
+    z-index: 3;
     border: 2px solid black;
-    align-items: center;
     border-radius: 15px;
+    overflow: hidden;
 }
 
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-    justify-content: center;
-}
-
-.modal-content {
-    width: 700px;
-    max-width: 100%;
+.modal-content { 
+    height: 100%;
+    overflow-y: auto;
+    margin: auto;
     padding: 20px;
     box-sizing: border-box;
     background-color: #fff;
     position: relative;
-    background-color: #f8eeec;
+    background-color: #F9F0DF;
     text-align: center;
     border-radius: 15px;
-}
-
-.modal-container {
-    text-align: center;
-}
-
-.modal-title {
-    font-family: 'Lexend', sans-serif;
-    font-size: 24px;
-    margin: 0;
-}
-
-.modal-image-container {
-    max-width: 100%;
-    max-height: 500px;
-    overflow: hidden;
-    margin: 0 auto;
-    border-radius: 15px;
-    border: 2px solid black;
-}
-
-.modal-img {
-    width: 100%;
-    height: auto;
 }
 
 .close-modal {
@@ -141,16 +148,41 @@ body {
     font-size: 24px;
 }
 
+.modal-details {
+    text-align: center;
+}
+
+.modal-title {
+    font-family: 'Lexend', sans-serif;
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.modal-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 2px solid black;
+}
+
+.modal-description {
+    font-family: 'Lexend', sans-serif; 
+    font-size: 16px;
+    color: #666;
+}
+
 #button-link {
     position: absolute;
-    top: 85%; 
+    top: 80%; 
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
 }
 
 #button-image {
-    width: 120px;
+    width: 140px;
     height: auto;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
@@ -174,9 +206,8 @@ nav {
     justify-content: space-between;
     height: 80px;
     padding: 0;
-    background-color: #f8eeec;
+    background-color: #F9F0DF;
     border-top: 2px solid black;
-    border-bottom: 2px solid black;
 }
 
 .logo-container {
@@ -198,6 +229,14 @@ nav {
     display: flex;
     justify-content: center;
     color: black;
+}
+
+.navbar-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links {
@@ -263,6 +302,8 @@ nav {
 }
 
 .grand-finale {
+    margin-bottom: 20px;
+    margin-top: 10px;
     font-family: 'Lexend', sans-serif;
     font-weight: 800;
     font-size: 18px;
@@ -348,7 +389,7 @@ svg {
 	display: grid;
 	place-items: center;
     border-radius: 20px;
-	padding: 50px 0;
+	padding: 20px 0;
 }
 
 .education-section .section-title {
@@ -356,6 +397,7 @@ svg {
     font-family: 'Lexend', sans-serif;
 	color: black;
 	position: relative;
+    margin-top: 0;
 	margin-bottom: 80px;
 	font-weight: 500;
 }
@@ -573,6 +615,8 @@ svg {
     overflow: hidden;
     background-color: #F9F0DF;
     transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
 }
 
 .portfolio-card:hover {
@@ -580,13 +624,25 @@ svg {
 }
 
 .portfolio-img {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    max-height: 210px;
     padding: 15px;
+    display: block; 
+    margin: 0 auto;
 }
 
 .portfolio-details {
     padding: 15px;
+    text-align: center;
+}
+
+.portfolio-img-container {
+    height: 200px;
+    overflow: hidden; 
+    display: flex;
+    margin-top: 10px;
+    justify-content: center; 
+    align-items: center; 
 }
 
 .project-title {
@@ -600,4 +656,85 @@ svg {
     font-family: 'Lexend', sans-serif;
     font-size: 14px;
     color: #666;
+}
+
+.portfolio-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.portfolio-modal-content {
+    width: 80%; 
+    max-width: 700px; 
+    height: 80vh; 
+    overflow-y: auto; 
+    margin: auto; 
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: relative;
+    background-color: #F9F0DF;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.portfolio-modal-image-container {
+    max-width: 100%;
+    max-height: 400px; 
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+
+.portfolio-modal-img {
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-modal-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #F9F0DF;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.portfolio-modal-title {
+    font-family: 'Lexend', sans-serif;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.close-portfolio-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #000;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.portfolio-card-description {
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
 }
