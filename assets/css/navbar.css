@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@800&family=Titan+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@800&display=swap");
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0;
+    background-color: #f9f0df;
+    border-top: 2px solid black;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 70px;
+    height: auto;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.logo-heading {
+    font-family: "Lexend", sans-serif;
+    font-size: 24px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+
+.navbar-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    font-family: "Lexend", sans-serif;
+    font-size: 20px;
+}
+
+.nav-links li {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-links .button-text {
+    padding: 8px 16px;
+    border: 2px solid black;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 3px 3px 0 black;
+    background-color: #e85c3b;
+}
+
+.nav-links .button-text:hover {
+    transform: translateY(3px);
+    box-shadow: 0 0 0 black;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
