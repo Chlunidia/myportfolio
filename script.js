@@ -152,6 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
 const form = document.querySelector("form");
 const fullName = document.getElementById("name");
 const email = document.getElementById("email");
@@ -168,13 +169,13 @@ function sendEmail() {
         Host: "smtp.elasticemail.com",
         Username: "chlunidiapk@gmail.com",
         Password: "665D6D0D32399C0C21510C4722D4A83CB1EC",
-        To: 'chlunidiapk@gmail.com',
+        To: 'chlunidia@gmail.com',
         From: "chlunidiapk@gmail.com",
         Subject: subject.value,
         Body: bodyMessage
     }).then(
         message => {
-            if (message == "OK") {
+            if (message === "OK") {
                 Swal.fire({
                     title: "Good job!",
                     text: "You clicked the button!",
