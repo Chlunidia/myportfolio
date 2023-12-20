@@ -184,3 +184,8 @@ function sendEmail() {
         }
     );
 }
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    sendEmail();
+});
