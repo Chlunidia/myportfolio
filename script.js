@@ -323,14 +323,14 @@ function loadAbout() {
     skillsContainer.innerHTML = '<h2 class="section-title">Skills</h2>';
     const skillsInnerContainer = document.createElement('div');
     skillsInnerContainer.classList.add('skills-container');
-    aboutContent.skills.forEach(skill => {
+    aboutContent.skills.forEach((skill, index) => {
         const skillElement = document.createElement('div');
         skillElement.classList.add('skill');
         skillElement.innerHTML = `
             <h2 class="skill-title">${skill.title}</h2>
             <div class="outer">
                 <div class="inner">
-                    <div class="percentage" id="number-${skill.title.replace(/\s/g, '')}">${skill.percentage}%</div>
+                    <div class="percentage" id="number-${index + 1}">${skill.percentage}%</div>
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
                         <defs>
                             <linearGradient id="GradientColor">
@@ -338,7 +338,7 @@ function loadAbout() {
                                 <stop offset="100%" stop-color="#269B1B" />
                             </linearGradient>
                         </defs>
-                        <circle class="circle1" cx="80" cy="80" r="70" stroke-linecap="round" />
+                        <circle class="circle${index + 1}" cx="80" cy="80" r="70" stroke-linecap="round" />
                     </svg>
                 </div>
             </div>`;
@@ -564,13 +564,13 @@ function setupPortfolioModal() {
 
 document.addEventListener('DOMContentLoaded', function () {
     let skills = [
-        { id: 'number1', percentage: 80 },
-        { id: 'number2', percentage: 75 },
-        { id: 'number3', percentage: 50 },
-        { id: 'number4', percentage: 30 },
-        { id: 'number5', percentage: 40 },
-        { id: 'number6', percentage: 20 },
-        { id: 'number7', percentage: 30 }
+        { id: 'number-1', percentage: 80 },
+        { id: 'number-2', percentage: 75 },
+        { id: 'number-3', percentage: 50 },
+        { id: 'number-4', percentage: 30 },
+        { id: 'number-5', percentage: 40 },
+        { id: 'number-6', percentage: 20 },
+        { id: 'number-7', percentage: 30 }
     ];
 
     skills.forEach(skill => {

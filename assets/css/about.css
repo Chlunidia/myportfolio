@@ -87,37 +87,81 @@ circle {
 }
 
 .circle1 {
-  stroke-dashoffset: 90; /* 80% */
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440; /* Start at 0% */
+  animation: anim1 1s forwards;
   stroke: url(#GradientColor);
 }
 .circle2 {
-  stroke-dashoffset: 112.5; /* 75% */
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440; /* Start at 0% */
+  animation: anim2 1s forwards;
   stroke: url(#GradientColor);
 }
 .circle3 {
-  stroke-dashoffset: 225; /* 50% */
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440; /* Start at 0% */
+  animation: anim3 1s forwards;
   stroke: url(#GradientColor);
 }
 .circle4 {
-  stroke-dashoffset: 315; /* 30% */
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440; /* Start at 0% */
+  animation: anim4 1s forwards;
   stroke: url(#GradientColor);
 }
 .circle5 {
-  stroke-dashoffset: 270; /* 40% */
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440; /* Start at 0% */
+  animation: anim5 1s forwards;
   stroke: url(#GradientColor);
 }
 .circle6 {
-  stroke-dashoffset: 360; /* 20% */
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440; /* Start at 0% */
+  animation: anim6 1s forwards;
   stroke: url(#GradientColor);
 }
 .circle7 {
-  stroke-dashoffset: 315; /* 30% */
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440; /* Start at 0% */
+  animation: anim7 1s forwards;
   stroke: url(#GradientColor);
 }
 
-@keyframes anim {
-  10% {
-    stroke-dashoffset: 0;
+@keyframes anim1 {
+  to {
+    stroke-dashoffset: 88; /* 80% */
+  }
+}
+@keyframes anim2 {
+  to {
+    stroke-dashoffset: 110; /* 75% */
+  }
+}
+@keyframes anim3 {
+  to {
+    stroke-dashoffset: 220; /* 50% */
+  }
+}
+@keyframes anim4 {
+  to {
+    stroke-dashoffset: 308; /* 30% */
+  }
+}
+@keyframes anim5 {
+  to {
+    stroke-dashoffset: 264; /* 40% */
+  }
+}
+@keyframes anim6 {
+  to {
+    stroke-dashoffset: 352; /* 20% */
+  }
+}
+@keyframes anim7 {
+  to {
+    stroke-dashoffset: 308; /* 30% */
   }
 }
 
