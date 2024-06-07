@@ -14,6 +14,22 @@ body {
   padding: 0;
   height: 100%;
   background-color: #fb99bf;
+  bottom: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
 }
 
 /* Home */
@@ -240,6 +256,10 @@ body {
     padding: 0 20px;
   }
 
+  .section-title {
+    font-size: 20px;
+  }
+
   .home-container {
     margin-top: 90px;
     position: relative;
@@ -351,8 +371,9 @@ body {
   .certificate-card,
   .achievement-card {
     flex: 0 0 auto;
-    width: 80%;
-    max-width: calc(100%);
+    width: 180px;
+    height: 220px;
+    max-width: calc(70%);
     margin-right: 15px;
   }
 
@@ -380,7 +401,7 @@ body {
 
   .certificate-title,
   .achievement-title {
-    font-size: 15px;
+    font-size: 12px;
     margin-bottom: 8px;
     white-space: normal;
     overflow-wrap: break-word;
@@ -388,8 +409,8 @@ body {
   }
 
   .certificate-description,
-  .achievements-description {
-    font-size: 14px;
+  .achievement-description {
+    font-size: 10px;
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;

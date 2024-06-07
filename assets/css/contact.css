@@ -6,7 +6,6 @@
   justify-content: center;
   align-items: center;
   background-color: #fb99bf;
-  position: relative;
 }
 
 .contact-card {
@@ -133,11 +132,16 @@
     display: none;
   }
 
+  .contact-page {
+    margin-top: 50px;
+  }
+
   .contact-form-container {
     width: 80%;
     padding: 20px;
     margin-left: 0;
     margin-top: 20px;
+    height: 310px;
   }
 
   .contact-form-container h2 {

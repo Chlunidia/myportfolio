@@ -363,4 +363,19 @@ circle {
 }
 
 @media (max-width: 768px) {
+  .section {
+    margin-top: 60px;
+  }
+
+  .skills-section .section-title {
+    font-size: 20px;
+  }
+
+  .experience-section .section-title {
+    font-size: 20px;
+  }
+
+  .education-section .section-title {
+    font-size: 20px;
+  }
 }
