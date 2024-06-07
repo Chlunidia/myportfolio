@@ -2,37 +2,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@800&display=swap");
 
 .footer-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 0;
-    padding: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .acc a i {
-    font-size: 24px;
-    color: white;
-    margin-right: 10px;
-    margin-bottom: 20px;
+  font-size: 24px;
+  color: white;
+  margin-right: 10px;
+  margin-bottom: 20px;
 }
 
 .footer-container {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer {
-    background-color: #25b418;
-    padding: 6px;
-    text-align: center;
+  background-color: #25b418;
+  padding: 6px;
+  text-align: center;
 }
 
 .grand-finale {
-    margin-bottom: 20px;
-    margin-top: 10px;
-    font-family: "Lexend", sans-serif;
-    font-weight: 800;
-    font-size: 18px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-family: "Lexend", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    height: 50px;
+  }
+
+  .grand-finale {
+    font-size: 10px;
+    margin: 0;
+  }
+
+  .acc a i {
+    font-size: 12px;
     color: white;
+    margin-top: 7px;
+    margin-bottom: 0;
+  }
+
+  .footer-container {
+    position: fixed;
+    width: 100%;
+  }
 }

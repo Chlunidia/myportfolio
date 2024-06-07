@@ -5,105 +5,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="assets/css/home.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/about.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/portfolio.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/contact.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/footer.css">
     <link rel="icon" href="assets/images/logo.png" type="image/x-icon" sizes="16x16 32x32 48x48">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Chlunidia</title>
 </head>
 
 <body>
-    <div id="navbar-container"></div>
-    <section class="section-1">
+    <div style="color: transparent; background-color:transparent;" class="navbar">
+        <nav>
+            <div class="logo-container">
+                <img src="assets/images/logo.png" alt="logo" class="logo">
+                <p class="logo-heading">Chlunidia</p>
+            </div>
+            <input class="checkbox" type="checkbox" id="menu-toggle" />
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="nav-links" id="menu-links">
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('about')">About</a></li>
+                <li><a href="#" onclick="showSection('portfolio')">Portfolio</a></li>
+                <li><a href="#" onclick="showSection('contact')" class="button-text">Contact</a></li>
+            </ul>
+        </nav>
+        <img src="assets/images/navbar.png" alt="Navbar image" class="navbar-img">
+    </div>
+    <br>
+
+    <!-- Sections -->
+    <div id="home" class="section">
         <div class="home-container">
-            <img src="assets/images/home-img.png" alt="home" class="home-img"></img>
+            <img src="assets/images/home-img.png" alt="home" class="home-img">
             <a class="button-explore" id="button-link" href="#section-2">
                 <img id="button-image" src="assets/images/btn-img.png" alt="Click me">
             </a>
         </div>
-    </section>
-    <section class="section-2" id="section-2">
-        <h1 class="section-title">Achievements</h1>
-        <div class="achievements">
-            <div class="certificate-slider-container">
-                <div class="certificate-slider">
-                    <div class="certificate-card">
-                        <div class="certificate-img-container">
-                            <img class="certificate-img" src="assets/sertif/sertif-4.jpg" alt="Certificate 4">
-                        </div>
-                        <div class="certificate-details">
-                            <h3 class="certificate-title">Memulai Pemrograman dengan Kotlin (Dicoding Indonesia)</h3>
-                            <p class="certificate-description">I received this certificate upon completing the IDCamp
-                                2023 Android Developer path. IDCamp is a scholarship program organized by Indosat
-                                Ooredoo Hutchison, and the classes are hosted on Dicoding.</p>
-                        </div>
-                    </div>
-                    <div class="certificate-card">
-                        <div class="certificate-img-container">
-                            <img class="certificate-img" src="assets/sertif/sertif-3.jpg" alt="Certificate 3">
-                        </div>
-                        <div class="certificate-details">
-                            <h3 class="certificate-title">Gold Medal PKMM AST-PTMA</h3>
-                            <p class="certificate-description">I received this certificate after winning a gold medal in
-                                the PKMM (Program Kreativitas Mahasiswa Perguruan Tinggi Muhammadiyah 'Aisyiyah)
-                                competition. I achieved the Gold medal as part of a team with our project titled
-                                'Trashify: Ekosistem Masyarakat Sadar Pemilahan Sampah Menggunakan Aplikasi Berbasi
-                                Android Dengan Menggunakan Algoritma Machine Learning.'
-
-                                The Program Kreativitas Mahasiswa Perguruan Tinggi Muhammadiyah 'Aisyiyah (PKMM) is an
-                                initiative by the Association of Science and Technology of Muhammadiyah 'Aisyiyah
-                                Universities (AST-PTMA). It provides a platform for students to showcase their
-                                creativity and innovation. The program has various categories, such as PKM Riset Eksakta
-                                (Research in Exact Sciences), PKM Kewirausahaan (Entrepreneurship), PKM Pengabdian
-                                Kepada Masyarakat (Community Service), PKM Penerapan IPTEK (Application of Science and
-                                Technology), and PKM Karsa Cipta (Innovative Idea).
-
-                                I took part in the Karsa Cipta category, specifically focusing on Innovative Ideas, with
-                                two separate teams, and I was a member of one of those teams.</p>
-                        </div>
-                    </div>
-                    <div class="certificate-card">
-                        <div class="certificate-img-container">
-                            <img class="certificate-img" src="assets/sertif/sertif-2.jpg" alt="Certificate 2">
-                        </div>
-                        <div class="certificate-details">
-                            <h3 class="certificate-title">Bronze Medal PKMM AST-PTMA</h3>
-                            <p class="certificate-description">I received this certificate after winning a bronze medal
-                                in the PKMM (Program Kreativitas Mahasiswa Perguruan Tinggi Muhammadiyah 'Aisyiyah)
-                                competition. I
-                                achieved the bronze medal as part of a team with our project titled 'Monitoring Dan
-                                Pencatatan Konsultasi Dokter Dan Pasien Berbasis Speech Recognition Untuk Mencegah
-                                Terjadinya Malapraktik.'</p>
-                        </div>
-                    </div>
-                    <div class="certificate-card">
-                        <div class="certificate-img-container">
-                            <img class="certificate-img" src="assets/sertif/sertif-1.jpg" alt="Certificate 1">
-                        </div>
-                        <div class="certificate-details">
-                            <h3 class="certificate-title">Participants of INVFEST 7.0 Competition</h3>
-                            <p class="certificate-description">I received this certificate for participating in a
-                                software development competition organized by Telkom University Purwokerto, called
-                                INVFEST 7.0, in 2022. This was my team's first competition, but unfortunately, we didn't
-                                win. So, this serves as a participant certificate. While we didn't secure a victory in
-                                our first competition, the experience was valuable, and we learned a lot from the
-                                challenges faced during the event.</p>
-                        </div>
-                    </div>
-                </div>
+    </div>
+    <div id="about" class="section" style="display:none;"></div>
+    <div id="portfolio" class="section" style="display:none;"></div>
+    <div id="contact" class="section" style="display:none;">
+        <div class="contact-page">
+            <div class="contact-card">
+                <h2>Contact Me!</h2>
+                <img src="assets/images/contact.png" alt="Contact Me!">
+            </div>
+            <div class="contact-form-container">
+                <h2>Get in Touch</h2>
+                <p>Feel free to drop us a line below!</p>
+                <form onsubmit="sendEmail(); reset(); return false;" class="contact-form">
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                    <input type="text" id="email" name="email" required placeholder="Your Email">
+                    <textarea id="message" name="message" rows="4" required
+                        placeholder="Typing your message here..."></textarea>
+                    <button class="btn-contact" type="submit">SEND</button>
+                </form>
             </div>
         </div>
-        <div class="overlay"></div>
-        <div class="modal-container">
-            <div class="modal-content">
-                <span class="close-modal" onclick="closeCertificateModal()">&times;</span>
-                <div class="modal-details">
-                    <h3 class="modal-title"></h3>
-                    <img class="modal-img" src="" alt="Certificate Image">
-                    <p class="modal-description"></p>
-                </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="modal-container">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCertificateModal()">&times;</span>
+            <div class="modal-details">
+                <h3 class="modal-title"></h3>
+                <img class="modal-img" src="" alt="Certificate Image">
+                <p class="modal-description"></p>
             </div>
         </div>
-    </section>
-    <div id="footer-container"></div>
+    </div>
+    <div class="portfolio-overlay" onclick="closePortfolioModal()"></div>
+    <div id="modal-container" class="portfolio-modal-container">
+        <div class="portfolio-modal-content">
+            <span class="close-portfolio-modal" onclick="closePortfolioModal()">&times;</span>
+            <div class="portfolio-modal-details">
+                <h3 class="portfolio-modal-title"></h3>
+                <img class="portfolio-modal-img" src="" alt="Project Image">
+                <p class="portfolio-card-description"></p>
+            </div>
+        </div>
+    </div>
+    <img src="assets/images/grass.png" alt="Footer image" class="footer-img">
+    <footer class="footer">
+        <p class="grand-finale">The grand finale! Or is it? Stay tuned...</p>
+        <div class="acc">
+            <a href="https://github.com/Chlunidia" target="_blank" title="GitHub" rel="noopener noreferrer"><i
+                    class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/chlunidia/" target="_blank" title="Instagram"
+                rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:chlunidia@gmail.com" target="_blank" title="Gmail" rel="noopener noreferrer"><i
+                    class="far fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/chlunidia/" target="_blank" title="LinkedIn"
+                rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 

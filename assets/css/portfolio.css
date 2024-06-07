@@ -1,139 +1,158 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@800&family=Titan+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@800&family=Titan+One&display=swap");
 
 .portfolio-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .portfolio-card {
-    width: 300px;
-    margin: 20px;
-    border: 2px solid #000;
-    border-radius: 15px;
-    overflow: hidden;
-    background-color: #f9f0df;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
+  width: 300px;
+  margin: 20px;
+  border: 2px solid #000;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #f9f0df;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolio-card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .portfolio-img {
-    max-width: 100%;
-    max-height: 210px;
-    padding: 15px;
-    display: block;
-    margin: 0 auto;
+  max-width: 100%;
+  max-height: 210px;
+  padding: 15px;
+  display: block;
+  margin: 0 auto;
 }
 
 .portfolio-details {
-    padding: 15px;
-    text-align: center;
+  padding: 15px;
+  text-align: center;
 }
 
 .portfolio-img-container {
-    height: 200px;
-    overflow: hidden;
-    display: flex;
-    margin-top: 10px;
-    justify-content: center;
-    align-items: center;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-title {
-    font-family: "Lexend", sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 10px;
+  font-family: "Lexend", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .project-description {
-    font-family: "Lexend", sans-serif;
-    font-size: 14px;
-    color: #666;
+  font-family: "Lexend", sans-serif;
+  font-size: 14px;
+  color: #666;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .portfolio-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .portfolio-modal-image-container {
-    max-width: 100%;
-    max-height: 400px;
-    overflow: hidden;
-    margin: 0 auto;
-    border-radius: 15px;
-    border: 2px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  max-width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 15px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .portfolio-modal-img {
-    width: auto;
-    height: auto;
-    max-width: 50%;
-    max-height: 50%;
-    display: block;
-    padding: 20px;
-    margin: auto;
+  width: auto;
+  height: auto;
+  max-width: 50%;
+  max-height: 50%;
+  display: block;
+  padding: 20px;
+  margin: auto;
 }
 
 .portfolio-modal-container {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    background-color: #f9f0df;
-    z-index: 3;
-    transform: translate(-50%, -50%);
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
-    border-radius: 15px;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: #f9f0df;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 15px;
 }
 
 .portfolio-modal-title {
-    font-family: "Lexend", sans-serif;
-    font-size: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    justify-content: center;
+  font-family: "Lexend", sans-serif;
+  font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: center;
 }
 
 .portfolio-modal-details {
-    max-height: 800px;
-    max-width: auto;
-    text-align: center;
-    max-height: 80vh;
+  max-height: 800px;
+  max-width: auto;
+  text-align: center;
+  max-height: 80vh;
 }
 
 .close-portfolio-modal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #000;
-    cursor: pointer;
-    font-size: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #000;
+  cursor: pointer;
+  font-size: 24px;
 }
 
 .portfolio-card-description {
-    font-family: "Lexend", sans-serif;
-    font-size: 16px;
-    color: #555;
-    padding: 20px;
+  font-family: "Lexend", sans-serif;
+  font-size: 16px;
+  color: #555;
+  padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-container {
+    margin-top: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
