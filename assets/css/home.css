@@ -180,7 +180,16 @@ body {
   right: 10px;
   color: #000;
   cursor: pointer;
-  font-size: 24px;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .modal-details {
@@ -417,10 +426,10 @@ body {
     white-space: nowrap;
   }
 
+  .modal-content,
   .modal-container {
-    max-width: 90%;
-    margin: 20px auto;
-    margin-top: 40px;
+    height: auto;
+    border: 1px solid black;
   }
 
   .modal-details {
@@ -437,6 +446,7 @@ body {
     height: auto;
     border-radius: 10px;
     margin-bottom: 10px;
+    border: 1px solid black;
   }
 
   .modal-description {
