@@ -10,13 +10,13 @@ function toggleMenu() {
         setTimeout(function () {
             menu.style.opacity = '1';
             menu.style.transform = 'translateY(0)';
-        }, 50); // Adding a slight delay for transition effect
+        }, 50);
     } else {
         menu.style.opacity = '0';
         menu.style.transform = 'translateY(-20px)';
         setTimeout(function () {
             menu.style.display = 'none';
-        }, 400); // Hiding the menu after transition ends
+        }, 400);
     }
 }
 
@@ -35,6 +35,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     menuToggle.addEventListener('click', function () {
         navLinks.classList.toggle('show');
+    });
+
+    const links = document.querySelectorAll('.nav-links a');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            const checkbox = document.getElementById('menu-toggle');
+            if (checkbox.checked) {
+                checkbox.checked = false;
+                navLinks.classList.remove('show');
+                toggleMenu();
+            }
+        });
     });
 });
 
@@ -86,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function () {
         { id: 'number6', percentage: 20 },
         { id: 'number7', percentage: 30 }
     ];
-
     skills.forEach(skill => {
         let counter = 0;
         let interval = setInterval(() => {
@@ -106,23 +117,19 @@ function showSection(sectionId) {
     sections.forEach(section => {
         section.style.display = 'none';
     });
-
     const targetSection = document.getElementById(sectionId);
     if (targetSection) {
         targetSection.style.display = 'block';
     }
-
-    // Close the menu on mobile after selecting a section
     const checkbox = document.getElementById('menu-toggle');
     if (checkbox.checked) {
         checkbox.checked = false;
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    showSection('home'); // Show home section by default
+document.addEventListener('DOMContentLoaded', function () {
+    showSection('home');
 
-    // Load Dynamic Content
     loadAchievements();
     loadCertificates();
     loadAbout();
@@ -419,38 +426,18 @@ function loadContact() {
                 <p>Feel free to drop us a line below!</p>
                 <form onsubmit="${contactContent.form.action}; reset(); return false;" class="contact-form">
                     ${contactContent.form.fields.map(field => {
-                        if (field.type === "textarea") {
-                            return `<textarea id="${field.id}" name="${field.id}" rows="4" required placeholder="${field.placeholder}"></textarea>`;
-                        } else {
-                            return `<input type="${field.type}" id="${field.id}" name="${field.id}" required placeholder="${field.placeholder}">`;
-                        }
-                    }).join('')}
+        if (field.type === "textarea") {
+            return `<textarea id="${field.id}" name="${field.id}" rows="4" required placeholder="${field.placeholder}"></textarea>`;
+        } else {
+            return `<input type="${field.type}" id="${field.id}" name="${field.id}" required placeholder="${field.placeholder}">`;
+        }
+    }).join('')}
                     <button class="btn-contact" type="submit">${contactContent.form.buttonText}</button>
                 </form>
             </div>
         </div>`;
 }
 
-// Function to Show Sections
-function showSection(sectionId) {
-    const sections = document.querySelectorAll('.section');
-    sections.forEach(section => {
-        section.style.display = 'none';
-    });
-
-    const targetSection = document.getElementById(sectionId);
-    if (targetSection) {
-        targetSection.style.display = 'block';
-    }
-
-    // Close the menu on mobile after selecting a section
-    const checkbox = document.getElementById('menu-toggle');
-    if (checkbox.checked) {
-        checkbox.checked = false;
-    }
-}
-
-// Modal setup functions
 function setupModals() {
     setupCertificateModal();
     setupAchievementModal();
@@ -464,27 +451,22 @@ function setupCertificateModal() {
     const modalTitle = document.querySelector('.modal-title');
     const modalDescription = document.querySelector('.modal-description');
     const modalImg = document.querySelector('.modal-img');
-
     certificateCards.forEach(function (card) {
         card.addEventListener('click', function () {
             const certificateTitle = card.querySelector('.certificate-title').textContent;
             const certificateDescription = card.querySelector('.certificate-description').textContent;
             const certificateImgSrc = card.querySelector('.certificate-img').getAttribute('src');
-
             modalTitle.textContent = certificateTitle;
             modalDescription.textContent = certificateDescription;
             modalImg.src = certificateImgSrc;
-
             modalContainer.style.display = 'flex';
             overlay.style.display = 'block';
         });
     });
-
     window.closeCertificateModal = function () {
         modalContainer.style.display = 'none';
         overlay.style.display = 'none';
     };
-
     window.addEventListener('click', function (event) {
         if (event.target === overlay) {
             closeCertificateModal();
@@ -499,27 +481,22 @@ function setupAchievementModal() {
     const modalTitle = document.querySelector('.modal-title');
     const modalDescription = document.querySelector('.modal-description');
     const modalImg = document.querySelector('.modal-img');
-
     achievementCards.forEach(function (card) {
         card.addEventListener('click', function () {
             const achievementTitle = card.querySelector('.achievement-title').textContent;
             const achievementDescription = card.querySelector('.achievement-description').textContent;
             const achievementImgSrc = card.querySelector('.achievement-img').getAttribute('src');
-
             modalTitle.textContent = achievementTitle;
             modalDescription.textContent = achievementDescription;
             modalImg.src = achievementImgSrc;
-
             modalContainer.style.display = 'flex';
             overlay.style.display = 'block';
         });
     });
-
     window.closeAchievementModal = function () {
         modalContainer.style.display = 'none';
         overlay.style.display = 'none';
     };
-
     window.addEventListener('click', function (event) {
         if (event.target === overlay) {
             closeAchievementModal();
@@ -534,27 +511,22 @@ function setupPortfolioModal() {
     const modalTitle = document.querySelector('.portfolio-modal-title');
     const modalDescription = document.querySelector('.portfolio-card-description');
     const modalImg = document.querySelector('.portfolio-modal-img');
-
     portfolioCards.forEach(function (card) {
         card.addEventListener('click', function () {
             const projectTitle = card.querySelector('.project-title').textContent;
             const projectDescription = card.querySelector('.project-description').textContent;
             const projectImgSrc = card.querySelector('.portfolio-img').getAttribute('src');
-
             modalTitle.textContent = projectTitle;
             modalDescription.textContent = projectDescription;
             modalImg.src = projectImgSrc;
-
             modalContainer.style.display = 'flex';
             overlay.style.display = 'block';
         });
     });
-
     window.closePortfolioModal = function () {
         modalContainer.style.display = 'none';
         overlay.style.display = 'none';
     };
-
     window.addEventListener('click', function (event) {
         if (event.target === overlay) {
             closePortfolioModal();
@@ -572,7 +544,6 @@ document.addEventListener('DOMContentLoaded', function () {
         { id: 'number-6', percentage: 20 },
         { id: 'number-7', percentage: 30 }
     ];
-
     skills.forEach(skill => {
         let counter = 0;
         let interval = setInterval(() => {
@@ -583,5 +554,46 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById(skill.id).innerHTML = `${counter}%`;
             }
         }, 30);
+    });
+});
+
+function toggleMenu() {
+    const menu = document.getElementById('menu-links');
+    const menuToggle = document.querySelector('.menu-toggle');
+
+    menu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+
+    if (menu.classList.contains('active')) {
+        menu.style.display = 'flex';
+        setTimeout(function () {
+            menu.style.opacity = '1';
+            menu.style.transform = 'translateY(0)';
+        }, 50); // Adding a slight delay for transition effect
+    } else {
+        menu.style.opacity = '0';
+        menu.style.transform = 'translateY(-20px)';
+        setTimeout(function () {
+            menu.style.display = 'none';
+        }, 400); // Hiding the menu after transition ends
+    }
+}
+
+document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        const checkbox = document.getElementById('menu-toggle');
+        checkbox.checked = false;
+        toggleMenu();
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', function () {
+        navLinks.classList.toggle('show');
     });
 });

@@ -22,6 +22,10 @@ body {
   flex-direction: column;
 }
 
+.section {
+  display: none;
+}
+
 .content {
   flex: 1;
   display: flex;
@@ -115,7 +119,7 @@ body {
   font-weight: 500;
   margin-bottom: 10px;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -128,7 +132,7 @@ body {
   color: #666;
   margin-bottom: 10px;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -254,7 +258,6 @@ body {
 
 /* For mobile devices */
 @media screen and (max-width: 768px) {
-  /* section-1 responsive */
   .section-1 {
     display: flex;
     margin-top: 80px;
@@ -295,7 +298,7 @@ body {
     position: fixed;
     width: 100%;
     background-color: #f8f9fa;
-    z-index: 1000;
+    z-index: 5;
   }
 
   .menu-toggle {
@@ -412,9 +415,12 @@ body {
   .achievement-title {
     font-size: 12px;
     margin-bottom: 8px;
-    white-space: normal;
-    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
     max-width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
 
   .certificate-description,
@@ -423,7 +429,9 @@ body {
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
 
   .modal-content,
