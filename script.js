@@ -106,48 +106,63 @@ const achievements = [
 
 const certificates = [
     {
+        title: "Belajar Pengembangan Aplikasi Android Intermediate",
+        description: "Description for certificate 3...",
+        url: "https://www.dicoding.com/certificates/L4PQ1EW94XO1",
+        img: "assets/pictures/certificates/certificate10.jpg"
+    },
+    {
         title: "Belajar Penerapan Machine Learning untuk Android",
         description: "I received this certificate upon completing the IDCamp 2023 Android Developer path...",
+        url: "https://www.dicoding.com/certificates/53XEO01KKZRN",
         img: "assets/pictures/certificates/certificate9.jpg"
     },
     {
         title: "Belajar Dasar AI",
         description: "Description for certificate 2...",
+        url: "https://www.dicoding.com/certificates/QLZ9451JEP5D",
         img: "assets/pictures/certificates/certificate8.jpg"
     },
     {
         title: "Belajar Prinsip Pemrograman SOLID",
         description: "Description for certificate 3...",
+        url: "https://www.dicoding.com/certificates/GRX5Q8KEYZ0M",
         img: "assets/pictures/certificates/certificate7.jpg"
     },
     {
         title: "Belajar Fundamental Aplikasi Android",
         description: "Description for certificate 2...",
+        url: "https://www.dicoding.com/certificates/JLX12NV85Z72",
         img: "assets/pictures/certificates/certificate6.jpg"
     },
     {
         title: "Belajar Membuat Aplikasi Android untuk Pemula",
         description: "Description for certificate 3...",
+        url: "https://www.dicoding.com/certificates/4EXGKRMREZRL",
         img: "assets/pictures/certificates/certificate5.jpg"
     },
     {
         title: "Memulai Pemrograman dengan Kotlin",
         description: "Description for certificate 2...",
+        url: "https://www.dicoding.com/certificates/6RPNVN6Q4Z2M",
         img: "assets/pictures/certificates/certificate4.jpg"
     },
     {
         title: "Belajar Dasar Git dengan GitHub",
         description: "Description for certificate 3...",
+        url: "https://www.dicoding.com/certificates/81P2V0OLQPOY",
         img: "assets/pictures/certificates/certificate3.jpg"
     },
     {
         title: "Pengenalan ke Logika Pemrograman (Programming Logic 101",
         description: "Description for certificate 2...",
+        url: "https://www.dicoding.com/certificates/1RXY1GW29PVM",
         img: "assets/pictures/certificates/certificate2.jpg"
     },
     {
         title: "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
         description: "Description for certificate 3...",
+        url: "https://www.dicoding.com/certificates/2VX3O9343ZYQ",
         img: "assets/pictures/certificates/certificate1.jpg"
     }
 ];
@@ -178,27 +193,38 @@ const portfolioContent = [
     {
         title: "Omotrash",
         description: "This app streamlines recycling by allowing users to log in securely...",
+        url: "https://github.com/Chlunidia/omotrash.git",
         img: "assets/portfolio/omotrash.png"
     },
     {
         title: "AppSel",
         description: "AppSel is a user interface (UI) application developed with the Flutter framework...",
+        url: "https://github.com/Chlunidia/appsel.git",
         img: "assets/portfolio/appsel.png"
     },
     {
         title: "Pokedex",
         description: "The Flutter Pokédex UI App presents a visually appealing and responsive user interface...",
+        url: "https://github.com/Chlunidia/pokedex.git",
         img: "assets/portfolio/pokedex.png"
     },
     {
         title: "Scoreboard",
         description: "A simple Flutter application, the Scoreboard, has been crafted to efficiently calculate...",
+        url: "https://github.com/Chlunidia/scoreboard.git",
         img: "assets/portfolio/scoreboard.png"
     },
     {
         title: "Personal Website",
         description: "I've created my own portfolio website with a visually appealing design...",
+        url: "https://github.com/Chlunidia/myportfolio.git",
         img: "assets/portfolio/web.png"
+    },
+    {
+        title: "Story Master",
+        description: "Android app Kotlin",
+        url: "https://github.com/Chlunidia/story-master.git",
+        img: "assets/portfolio/storymaster.png"
     }
 ];
 
@@ -361,6 +387,7 @@ function setupCertificateModal() {
     const modalTitle = modalContainer.querySelector('.modal-title');
     const modalDescription = modalContainer.querySelector('.modal-description');
     const modalImg = modalContainer.querySelector('.modal-img');
+    const modalLink = modalContainer.querySelector('.modal-link'); // Add this line
 
     certificateCards.forEach(function (card, index) {
         card.addEventListener('click', function () {
@@ -369,6 +396,8 @@ function setupCertificateModal() {
             modalTitle.textContent = certificate.title;
             modalDescription.textContent = certificate.description;
             modalImg.src = certificate.img;
+            modalLink.href = certificate.url; // Add this line
+            modalLink.style.display = 'block'; // Show the link
 
             modalContainer.style.display = 'flex';
             overlay.style.display = 'block';
@@ -378,10 +407,46 @@ function setupCertificateModal() {
     window.closeCertificateModal = function () {
         modalContainer.style.display = 'none';
         overlay.style.display = 'none';
+        modalLink.style.display = 'none'; // Hide the link when modal is closed
     };
 
     overlay.addEventListener('click', function () {
         closeCertificateModal();
+    });
+}
+
+function setupPortfolioModal() {
+    const portfolioCards = document.querySelectorAll('.portfolio-card');
+    const modalContainer = document.getElementById('portfolio-modal-container');
+    const overlay = document.getElementById('overlay');
+    const modalTitle = modalContainer.querySelector('.portfolio-modal-title');
+    const modalDescription = modalContainer.querySelector('.portfolio-card-description');
+    const modalImg = modalContainer.querySelector('.portfolio-modal-img');
+    const modalLink = modalContainer.querySelector('.portfolio-modal-link'); // Add this line
+
+    portfolioCards.forEach(function (card, index) {
+        card.addEventListener('click', function () {
+            const portfolio = portfolioContent[index];
+
+            modalTitle.textContent = portfolio.title;
+            modalDescription.textContent = portfolio.description;
+            modalImg.src = portfolio.img;
+            modalLink.href = portfolio.url; // Add this line
+            modalLink.style.display = 'block'; // Show the link
+
+            modalContainer.style.display = 'flex';
+            overlay.style.display = 'block';
+        });
+    });
+
+    window.closePortfolioModal = function () {
+        modalContainer.style.display = 'none';
+        overlay.style.display = 'none';
+        modalLink.style.display = 'none'; // Hide the link when modal is closed
+    };
+
+    overlay.addEventListener('click', function () {
+        closePortfolioModal();
     });
 }
 
@@ -413,36 +478,5 @@ function setupAchievementModal() {
 
     overlay.addEventListener('click', function () {
         closeAchievementModal();
-    });
-}
-
-function setupPortfolioModal() {
-    const portfolioCards = document.querySelectorAll('.portfolio-card');
-    const modalContainer = document.getElementById('portfolio-modal-container');
-    const overlay = document.getElementById('overlay');
-    const modalTitle = modalContainer.querySelector('.portfolio-modal-title');
-    const modalDescription = modalContainer.querySelector('.portfolio-card-description');
-    const modalImg = modalContainer.querySelector('.portfolio-modal-img');
-
-    portfolioCards.forEach(function (card, index) {
-        card.addEventListener('click', function () {
-            const portfolio = portfolioContent[index];
-
-            modalTitle.textContent = portfolio.title;
-            modalDescription.textContent = portfolio.description;
-            modalImg.src = portfolio.img;
-
-            modalContainer.style.display = 'flex';
-            overlay.style.display = 'block';
-        });
-    });
-
-    window.closePortfolioModal = function () {
-        modalContainer.style.display = 'none';
-        overlay.style.display = 'none';
-    };
-
-    overlay.addEventListener('click', function () {
-        closePortfolioModal();
     });
 }

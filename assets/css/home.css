@@ -256,6 +256,19 @@ body {
   text-align: center;
 }
 
+#certificate-modal-container .modal-link {
+  font-family: "Lexend", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  margin: 10px;
+  transition: color 0.3s ease;
+}
+
+#certificate-modal-container .modal-link:hover {
+  text-decoration: underline;
+}
+
 /* For mobile devices */
 @media screen and (max-width: 768px) {
   .section-1 {
