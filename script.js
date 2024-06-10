@@ -10,43 +10,31 @@ function toggleMenu() {
         setTimeout(function () {
             menu.style.opacity = '1';
             menu.style.transform = 'translateY(0)';
-        }, 50); // Adding a slight delay for transition effect
+        }, 50);
     } else {
         menu.style.opacity = '0';
         menu.style.transform = 'translateY(-20px)';
         setTimeout(function () {
             menu.style.display = 'none';
-        }, 400); // Hiding the menu after transition ends
+        }, 400);
     }
 }
 
 document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
 
-fetch('./navbar.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('navbar-container').innerHTML = data;
-    })
-    .catch(error => console.error('Error fetching navbar:', error));
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        const checkbox = document.getElementById('menu-toggle');
+        checkbox.checked = false;
+        toggleMenu();
+    });
+});
 
 document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
-
     menuToggle.addEventListener('click', function () {
         navLinks.classList.toggle('show');
-    });
-
-    const links = document.querySelectorAll('.nav-links a');
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            const checkbox = document.getElementById('menu-toggle');
-            if (checkbox.checked) {
-                checkbox.checked = false;
-                navLinks.classList.remove('show');
-                toggleMenu();
-            }
-        });
     });
 });
 
@@ -73,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Function to Show Sections
 function showSection(sectionId) {
     const sections = document.querySelectorAll('.section');
     sections.forEach(section => {
@@ -91,13 +78,11 @@ function showSection(sectionId) {
 
 document.addEventListener('DOMContentLoaded', function () {
     showSection('home');
-
     loadAchievements();
     loadCertificates();
     loadAbout();
     loadPortfolio();
     loadContact();
-
     setupModals();
 });
 
@@ -217,20 +202,6 @@ const portfolioContent = [
     }
 ];
 
-const contactContent = {
-    title: "Contact Me!",
-    img: "assets/images/contact.png",
-    form: {
-        action: "sendEmail()",
-        fields: [
-            { id: "name", type: "text", placeholder: "Your Name" },
-            { id: "email", type: "text", placeholder: "Your Email" },
-            { id: "message", type: "textarea", placeholder: "Typing your message here..." }
-        ],
-        buttonText: "SEND"
-    }
-};
-
 function loadAchievements() {
     const container = document.getElementById('home');
     const section = document.createElement('section');
@@ -315,7 +286,6 @@ function loadAbout() {
     });
     skillsContainer.appendChild(skillsInnerContainer);
     container.appendChild(skillsContainer);
-
     const experienceContainer = document.createElement('div');
     experienceContainer.classList.add('experience-section');
     experienceContainer.innerHTML = '<h2 class="section-title">Experience</h2>';
@@ -334,7 +304,6 @@ function loadAbout() {
     experienceInnerContainer.appendChild(experienceList);
     experienceContainer.appendChild(experienceInnerContainer);
     container.appendChild(experienceContainer);
-
     const educationContainer = document.createElement('div');
     educationContainer.classList.add('education-section');
     educationContainer.innerHTML = '<h2 class="section-title">Education</h2>';
@@ -375,6 +344,10 @@ function loadPortfolio() {
     container.appendChild(portfolioContainer);
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    setupModals();
+});
+
 function setupModals() {
     setupCertificateModal();
     setupAchievementModal();
@@ -383,132 +356,93 @@ function setupModals() {
 
 function setupCertificateModal() {
     const certificateCards = document.querySelectorAll('.certificate-card');
-    const modalContainer = document.querySelector('.modal-container');
-    const overlay = document.querySelector('.overlay');
-    const modalTitle = document.querySelector('.modal-title');
-    const modalDescription = document.querySelector('.modal-description');
-    const modalImg = document.querySelector('.modal-img');
-    certificateCards.forEach(function (card) {
+    const modalContainer = document.getElementById('certificate-modal-container');
+    const overlay = document.getElementById('overlay');
+    const modalTitle = modalContainer.querySelector('.modal-title');
+    const modalDescription = modalContainer.querySelector('.modal-description');
+    const modalImg = modalContainer.querySelector('.modal-img');
+
+    certificateCards.forEach(function (card, index) {
         card.addEventListener('click', function () {
-            const certificateTitle = card.querySelector('.certificate-title').textContent;
-            const certificateDescription = card.querySelector('.certificate-description').textContent;
-            const certificateImgSrc = card.querySelector('.certificate-img').getAttribute('src');
-            modalTitle.textContent = certificateTitle;
-            modalDescription.textContent = certificateDescription;
-            modalImg.src = certificateImgSrc;
+            const certificate = certificates[index];
+
+            modalTitle.textContent = certificate.title;
+            modalDescription.textContent = certificate.description;
+            modalImg.src = certificate.img;
+
             modalContainer.style.display = 'flex';
             overlay.style.display = 'block';
         });
     });
+
     window.closeCertificateModal = function () {
         modalContainer.style.display = 'none';
         overlay.style.display = 'none';
     };
-    window.addEventListener('click', function (event) {
-        if (event.target === overlay) {
-            closeCertificateModal();
-        }
+
+    overlay.addEventListener('click', function () {
+        closeCertificateModal();
     });
 }
 
 function setupAchievementModal() {
     const achievementCards = document.querySelectorAll('.achievement-card');
-    const modalContainer = document.querySelector('.modal-container');
-    const overlay = document.querySelector('.overlay');
-    const modalTitle = document.querySelector('.modal-title');
-    const modalDescription = document.querySelector('.modal-description');
-    const modalImg = document.querySelector('.modal-img');
-    achievementCards.forEach(function (card) {
+    const modalContainer = document.getElementById('achievement-modal-container');
+    const overlay = document.getElementById('overlay');
+    const modalTitle = modalContainer.querySelector('.modal-title');
+    const modalDescription = modalContainer.querySelector('.modal-description');
+    const modalImg = modalContainer.querySelector('.modal-img');
+
+    achievementCards.forEach(function (card, index) {
         card.addEventListener('click', function () {
-            const achievementTitle = card.querySelector('.achievement-title').textContent;
-            const achievementDescription = card.querySelector('.achievement-description').textContent;
-            const achievementImgSrc = card.querySelector('.achievement-img').getAttribute('src');
-            modalTitle.textContent = achievementTitle;
-            modalDescription.textContent = achievementDescription;
-            modalImg.src = achievementImgSrc;
+            const achievement = achievements[index];
+
+            modalTitle.textContent = achievement.title;
+            modalDescription.textContent = achievement.description;
+            modalImg.src = achievement.img;
+
             modalContainer.style.display = 'flex';
             overlay.style.display = 'block';
         });
     });
+
     window.closeAchievementModal = function () {
         modalContainer.style.display = 'none';
         overlay.style.display = 'none';
     };
-    window.addEventListener('click', function (event) {
-        if (event.target === overlay) {
-            closeAchievementModal();
-        }
+
+    overlay.addEventListener('click', function () {
+        closeAchievementModal();
     });
 }
 
 function setupPortfolioModal() {
     const portfolioCards = document.querySelectorAll('.portfolio-card');
-    const modalContainer = document.querySelector('.portfolio-modal-container');
-    const overlay = document.querySelector('.portfolio-overlay');
-    const modalTitle = document.querySelector('.portfolio-modal-title');
-    const modalDescription = document.querySelector('.portfolio-card-description');
-    const modalImg = document.querySelector('.portfolio-modal-img');
-    portfolioCards.forEach(function (card) {
+    const modalContainer = document.getElementById('portfolio-modal-container');
+    const overlay = document.getElementById('overlay');
+    const modalTitle = modalContainer.querySelector('.portfolio-modal-title');
+    const modalDescription = modalContainer.querySelector('.portfolio-card-description');
+    const modalImg = modalContainer.querySelector('.portfolio-modal-img');
+
+    portfolioCards.forEach(function (card, index) {
         card.addEventListener('click', function () {
-            const projectTitle = card.querySelector('.project-title').textContent;
-            const projectDescription = card.querySelector('.project-description').textContent;
-            const projectImgSrc = card.querySelector('.portfolio-img').getAttribute('src');
-            modalTitle.textContent = projectTitle;
-            modalDescription.textContent = projectDescription;
-            modalImg.src = projectImgSrc;
+            const portfolio = portfolioContent[index];
+
+            modalTitle.textContent = portfolio.title;
+            modalDescription.textContent = portfolio.description;
+            modalImg.src = portfolio.img;
+
             modalContainer.style.display = 'flex';
             overlay.style.display = 'block';
         });
     });
+
     window.closePortfolioModal = function () {
         modalContainer.style.display = 'none';
         overlay.style.display = 'none';
     };
-    window.addEventListener('click', function (event) {
-        if (event.target === overlay) {
-            closePortfolioModal();
-        }
+
+    overlay.addEventListener('click', function () {
+        closePortfolioModal();
     });
 }
-
-document.addEventListener('DOMContentLoaded', function () {
-    let skills = [
-        { id: 'number-1', percentage: 80 },
-        { id: 'number-2', percentage: 75 },
-        { id: 'number-3', percentage: 50 },
-        { id: 'number-4', percentage: 30 },
-        { id: 'number-5', percentage: 40 },
-        { id: 'number-6', percentage: 20 },
-        { id: 'number-7', percentage: 30 }
-    ];
-    skills.forEach(skill => {
-        let counter = 0;
-        let interval = setInterval(() => {
-            if (counter == skill.percentage) {
-                clearInterval(interval);
-            } else {
-                counter += 1;
-                document.getElementById(skill.id).innerHTML = `${counter}%`;
-            }
-        }, 30);
-    });
-});
-
-document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
-
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        const checkbox = document.getElementById('menu-toggle');
-        checkbox.checked = false;
-        toggleMenu();
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuToggle.addEventListener('click', function () {
-        navLinks.classList.toggle('show');
-    });
-});

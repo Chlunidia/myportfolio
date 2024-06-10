@@ -67,13 +67,13 @@
                             <input type="email" id="email" name="email" placeholder="Your Email" required>
                             <textarea id="message" name="message" rows="4" placeholder="Typing your message here..."
                                 required></textarea>
-                            <button class="btn-contact" type="submit">SEND</button>
+                            <button class="btn-contact" type="submit">Send</button>
                         </form>
                     </div>
                 </div>
             </div>
             <div id="overlay" class="overlay"></div>
-            <div class="modal-container">
+            <div id="certificate-modal-container" class="modal-container">
                 <div class="modal-content">
                     <span class="close-modal" onclick="closeCertificateModal()">&times;</span>
                     <div class="modal-details">
@@ -83,14 +83,23 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio-overlay" onclick="closePortfolioModal()"></div>
-            <div id="modal-container" class="portfolio-modal-container">
+            <div id="portfolio-modal-container" class="portfolio-modal-container">
                 <div class="portfolio-modal-content">
                     <span class="close-portfolio-modal" onclick="closePortfolioModal()">&times;</span>
                     <div class="portfolio-modal-details">
                         <h3 class="portfolio-modal-title"></h3>
                         <img class="portfolio-modal-img" src="" alt="Project Image">
                         <p class="portfolio-card-description"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="achievement-modal-container" class="modal-container">
+                <div class="modal-content">
+                    <span class="close-modal" onclick="closeAchievementModal()">&times;</span>
+                    <div class="modal-details">
+                        <h3 class="modal-title"></h3>
+                        <img class="modal-img" src="" alt="Achievement Image">
+                        <p class="modal-description"></p>
                     </div>
                 </div>
             </div>
