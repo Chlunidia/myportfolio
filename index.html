@@ -30,10 +30,10 @@
                     <span class="line line3"></span>
                 </div>
                 <ul class="nav-links" id="menu-links">
-                    <li><a href="#" onclick="showSection('home')">Home</a></li>
-                    <li><a href="#" onclick="showSection('about')">About</a></li>
-                    <li><a href="#" onclick="showSection('portfolio')">Portfolio</a></li>
-                    <li><a href="#" onclick="showSection('contact')" class="button-text">Contact</a></li>
+                    <li><a onclick="showSection('home')">Home</a></li>
+                    <li><a onclick="showSection('about')">About</a></li>
+                    <li><a onclick="showSection('portfolio')">Portfolio</a></li>
+                    <li><a onclick="showSection('contact')" class="button-text">Contact</a></li>
                     <img src="assets/images/navbar.png" alt="Navbar image" class="navbar-img-navlink">
                 </ul>
                 <img src="assets/images/navbar.png" alt="Navbar image" class="navbar-img">
@@ -61,11 +61,12 @@
                     <div class="contact-form-container">
                         <h2>Get in Touch</h2>
                         <p>Feel free to drop me a line below!</p>
-                        <form onsubmit="sendEmail(); reset(); return false;" class="contact-form">
-                            <input type="text" id="name" name="name" required placeholder="Your Name">
-                            <input type="text" id="email" name="email" required placeholder="Your Email">
-                            <textarea id="message" name="message" rows="4" required
-                                placeholder="Typing your message here..."></textarea>
+                        <form class="contact-form" action="https://formcarry.com/s/JzaU0YQNrjY" method="POST"
+                            enctype="multipart/form-data">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <textarea id="message" name="message" rows="4" placeholder="Typing your message here..."
+                                required></textarea>
                             <button class="btn-contact" type="submit">SEND</button>
                         </form>
                     </div>

@@ -6,17 +6,17 @@ function toggleMenu() {
     menuToggle.classList.toggle('active');
 
     if (menu.classList.contains('active')) {
-        menu.style.display = 'block';
+        menu.style.display = 'flex';
         setTimeout(function () {
             menu.style.opacity = '1';
             menu.style.transform = 'translateY(0)';
-        }, 50);
+        }, 50); // Adding a slight delay for transition effect
     } else {
         menu.style.opacity = '0';
         menu.style.transform = 'translateY(-20px)';
         setTimeout(function () {
             menu.style.display = 'none';
-        }, 400);
+        }, 400); // Hiding the menu after transition ends
     }
 }
 
@@ -48,44 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-});
-
-const form = document.querySelector("form");
-const fullName = document.getElementById("name");
-const email = document.getElementById("email");
-const phone = document.getElementById("phone");
-const subject = document.getElementById("subject");
-const mess = document.getElementById("message");
-
-function sendEmail() {
-    const bodyMessage = `Full Name: ${fullName.value}
-    <br> Email: ${email.value}
-    <br> Phone Number: ${phone.value}
-    <br> Message: ${mess.value}`;
-    Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "chlunidiapk@gmail.com",
-        Password: "665D6D0D32399C0C21510C4722D4A83CB1EC",
-        To: 'chlunidia@gmail.com',
-        From: "chlunidiapk@gmail.com",
-        Subject: subject.value,
-        Body: bodyMessage
-    }).then(
-        message => {
-            if (message === "OK") {
-                Swal.fire({
-                    title: "Good job!",
-                    text: "You clicked the button!",
-                    icon: "success"
-                });
-            }
-        }
-    );
-}
-
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    sendEmail();
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -413,31 +375,6 @@ function loadPortfolio() {
     container.appendChild(portfolioContainer);
 }
 
-function loadContact() {
-    const container = document.getElementById('contact');
-    container.innerHTML = `
-        <div class="contact-page">
-            <div class="contact-card">
-                <h2>${contactContent.title}</h2>
-                <img src="${contactContent.img}" alt="${contactContent.title}">
-            </div>
-            <div class="contact-form-container">
-                <h2>Get in Touch</h2>
-                <p>Feel free to drop us a line below!</p>
-                <form onsubmit="${contactContent.form.action}; reset(); return false;" class="contact-form">
-                    ${contactContent.form.fields.map(field => {
-        if (field.type === "textarea") {
-            return `<textarea id="${field.id}" name="${field.id}" rows="4" required placeholder="${field.placeholder}"></textarea>`;
-        } else {
-            return `<input type="${field.type}" id="${field.id}" name="${field.id}" required placeholder="${field.placeholder}">`;
-        }
-    }).join('')}
-                    <button class="btn-contact" type="submit">${contactContent.form.buttonText}</button>
-                </form>
-            </div>
-        </div>`;
-}
-
 function setupModals() {
     setupCertificateModal();
     setupAchievementModal();
@@ -556,28 +493,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 30);
     });
 });
-
-function toggleMenu() {
-    const menu = document.getElementById('menu-links');
-    const menuToggle = document.querySelector('.menu-toggle');
-
-    menu.classList.toggle('active');
-    menuToggle.classList.toggle('active');
-
-    if (menu.classList.contains('active')) {
-        menu.style.display = 'flex';
-        setTimeout(function () {
-            menu.style.opacity = '1';
-            menu.style.transform = 'translateY(0)';
-        }, 50); // Adding a slight delay for transition effect
-    } else {
-        menu.style.opacity = '0';
-        menu.style.transform = 'translateY(-20px)';
-        setTimeout(function () {
-            menu.style.display = 'none';
-        }, 400); // Hiding the menu after transition ends
-    }
-}
 
 document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
 
