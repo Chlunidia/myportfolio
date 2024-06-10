@@ -89,17 +89,17 @@ document.addEventListener('DOMContentLoaded', function () {
 const achievements = [
     {
         title: "Gold Medal PKMM AST-PTMA",
-        description: "I received this certificate after winning a gold medal in the PKMM...",
+        description: "Achieved the gold medal at the PKM Muhammadiyah 2023 (Program Kreativitas Mahasiswa) competition in the PKM-KC category (Program Kreativitas Mahasiswa Karsa Cipta) with the project titled 'Trashify: Trashify: Ekosistem Masyarakat Sadar Pemilahan Sampah Menggunakan Aplikasi Berbasis Android dengan Menggunakan Algoritma Machine Learning'. I participated in this competition as part of a team with my two friends.",
         img: "assets/pictures/achievements/achievement3.jpg"
     },
     {
         title: "Bronze Medal PKMM AST-PTMA",
-        description: "I received this certificate after winning a bronze medal in the PKMM...",
+        description: "Achieved the bronze medal at the PKM Muhammadiyah 2023 (Program Kreativitas Mahasiswa) competition in the PKM-KC category (Program Kreativitas Mahasiswa Karsa Cipta) with the project titled 'Monitoring dan Pencatatan Konsultasi Dokter dan Pasien Berbasis Speech Recognition Untuk Mencegah Terjadinya Malapraktik'. I participated in this competition as part of a team with my two friends.",
         img: "assets/pictures/achievements/achievement2.jpg"
     },
     {
-        title: "Participants of INVFEST 7.0 Competition",
-        description: "I received this certificate for participating in a software development competition...",
+        title: "Participant of INVFEST 7.0 Competition",
+        description: "Received this certificate for participating in the INVFEST 7.0 software development competition. This was my first competition, and I participated as part of a team with two friends.",
         img: "assets/pictures/achievements/achievement1.jpg"
     }
 ];
@@ -107,61 +107,61 @@ const achievements = [
 const certificates = [
     {
         title: "Belajar Pengembangan Aplikasi Android Intermediate",
-        description: "Description for certificate 3...",
+        description: "Completed the Intermediate Android Application Development course, enhancing my skills in creating robust Android applications as part of the Bangkit Academy 2024 Batch 1, led by Google, Gojek, Tokopedia, and Traveloka.",
         url: "https://www.dicoding.com/certificates/L4PQ1EW94XO1",
         img: "assets/pictures/certificates/certificate10.jpg"
     },
     {
         title: "Belajar Penerapan Machine Learning untuk Android",
-        description: "I received this certificate upon completing the IDCamp 2023 Android Developer path...",
+        description: "Received this certificate upon completing the course on implementing machine learning in Android applications as part of the Bangkit Academy 2024 Batch 1, led by Google, Gojek, Tokopedia, and Traveloka.",
         url: "https://www.dicoding.com/certificates/53XEO01KKZRN",
         img: "assets/pictures/certificates/certificate9.jpg"
     },
     {
         title: "Belajar Dasar AI",
-        description: "Description for certificate 2...",
+        description: "Completed the Basic AI course, providing a strong foundation in artificial intelligence concepts and applications as part of the Bangkit Academy 2024 Batch 1, led by Google, Gojek, Tokopedia, and Traveloka.",
         url: "https://www.dicoding.com/certificates/QLZ9451JEP5D",
         img: "assets/pictures/certificates/certificate8.jpg"
     },
     {
         title: "Belajar Prinsip Pemrograman SOLID",
-        description: "Description for certificate 3...",
+        description: "Learned and applied the SOLID principles in programming, improving my ability to write maintainable and scalable code as part of the Bangkit Academy 2024 Batch 1, led by Google, Gojek, Tokopedia, and Traveloka.",
         url: "https://www.dicoding.com/certificates/GRX5Q8KEYZ0M",
         img: "assets/pictures/certificates/certificate7.jpg"
     },
     {
         title: "Belajar Fundamental Aplikasi Android",
-        description: "Description for certificate 2...",
+        description: "Completed the Fundamental Android Application Development course, gaining essential skills for Android development as part of the Bangkit Academy 2024 Batch 1, led by Google, Gojek, Tokopedia, and Traveloka.",
         url: "https://www.dicoding.com/certificates/JLX12NV85Z72",
         img: "assets/pictures/certificates/certificate6.jpg"
     },
     {
         title: "Belajar Membuat Aplikasi Android untuk Pemula",
-        description: "Description for certificate 3...",
+        description: "Completed the course on Creating Android Applications for Beginners, which introduced me to the basics of Android development as part of the Bangkit Academy 2024 Batch 1, led by Google, Gojek, Tokopedia, and Traveloka.",
         url: "https://www.dicoding.com/certificates/4EXGKRMREZRL",
         img: "assets/pictures/certificates/certificate5.jpg"
     },
     {
         title: "Memulai Pemrograman dengan Kotlin",
-        description: "Description for certificate 2...",
+        description: "Received this certificate upon completing the IDCamp 2023 Android Developer path, focusing on starting programming with Kotlin.",
         url: "https://www.dicoding.com/certificates/6RPNVN6Q4Z2M",
         img: "assets/pictures/certificates/certificate4.jpg"
     },
     {
         title: "Belajar Dasar Git dengan GitHub",
-        description: "Description for certificate 3...",
+        description: "Learned the basics of Git and GitHub, improving my version control skills and collaboration in software development as part of the Bangkit Academy 2024 Batch 1, led by Google, Gojek, Tokopedia, and Traveloka.",
         url: "https://www.dicoding.com/certificates/81P2V0OLQPOY",
         img: "assets/pictures/certificates/certificate3.jpg"
     },
     {
-        title: "Pengenalan ke Logika Pemrograman (Programming Logic 101",
-        description: "Description for certificate 2...",
+        title: "Pengenalan ke Logika Pemrograman (Programming Logic 101)",
+        description: "Completed the Programming Logic 101 course, which provided a solid understanding of programming logic and problem-solving techniques as part of the Bangkit Academy 2024 Batch 1, led by Google, Gojek, Tokopedia, and Traveloka.",
         url: "https://www.dicoding.com/certificates/1RXY1GW29PVM",
         img: "assets/pictures/certificates/certificate2.jpg"
     },
     {
         title: "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
-        description: "Description for certificate 3...",
+        description: "Completed the course on Basic Programming for Aspiring Software Developers, laying the groundwork for a career in software development as part of the Bangkit Academy 2024 Batch 1, led by Google, Gojek, Tokopedia, and Traveloka.",
         url: "https://www.dicoding.com/certificates/2VX3O9343ZYQ",
         img: "assets/pictures/certificates/certificate1.jpg"
     }
@@ -192,37 +192,37 @@ const aboutContent = {
 const portfolioContent = [
     {
         title: "Omotrash",
-        description: "This app streamlines recycling by allowing users to log in securely...",
+        description: "I developed this application as my final project for the Multiplatform Programming course in 2023. This application serves as a solution for collecting sorted inorganic waste for recycling purposes. Users can utilize the app to gather recyclable waste generated from their consumption. They can submit details about the waste, including its recyclable nature and the pickup address. The application integrates Google Maps to facilitate locating the waste pickup points. The submitted data is displayed on the screen, accompanied by a button that directs the waste collector to the pickup location using Google Maps.",
         url: "https://github.com/Chlunidia/omotrash.git",
         img: "assets/portfolio/omotrash.png"
     },
     {
         title: "AppSel",
-        description: "AppSel is a user interface (UI) application developed with the Flutter framework...",
+        description: "AppSel is a user interface (UI) application developed with the Flutter framework. I created this project to learn and practice Flutter development.",
         url: "https://github.com/Chlunidia/appsel.git",
         img: "assets/portfolio/appsel.png"
     },
     {
         title: "Pokedex",
-        description: "The Flutter Pokédex UI App presents a visually appealing and responsive user interface...",
+        description: "The Flutter Pokédex UI App presents a visually appealing and responsive user interface, allowing users to browse and search for Pokémon information efficiently. I created this project to learn and practice Flutter development.",
         url: "https://github.com/Chlunidia/pokedex.git",
         img: "assets/portfolio/pokedex.png"
     },
     {
         title: "Scoreboard",
-        description: "A simple Flutter application, the Scoreboard, has been crafted to efficiently calculate...",
+        description: "A simple Flutter application, the Scoreboard efficiently calculates and displays scores for various sports and games, making it easy to keep track of points. I created this project to learn and practice Flutter development.",
         url: "https://github.com/Chlunidia/scoreboard.git",
         img: "assets/portfolio/scoreboard.png"
     },
     {
         title: "Personal Website",
-        description: "I've created my own portfolio website with a visually appealing design...",
+        description: "I created my own portfolio website with a visually appealing design, showcasing my skills, projects, and achievements in an organized and engaging manner.",
         url: "https://github.com/Chlunidia/myportfolio.git",
         img: "assets/portfolio/web.png"
     },
     {
         title: "Story Master",
-        description: "Android app Kotlin",
+        description: "Story Master is an Android app developed in Kotlin, integrating the Dicoding Story API to manage and share user stories.",
         url: "https://github.com/Chlunidia/story-master.git",
         img: "assets/portfolio/storymaster.png"
     }
@@ -387,7 +387,7 @@ function setupCertificateModal() {
     const modalTitle = modalContainer.querySelector('.modal-title');
     const modalDescription = modalContainer.querySelector('.modal-description');
     const modalImg = modalContainer.querySelector('.modal-img');
-    const modalLink = modalContainer.querySelector('.modal-link'); // Add this line
+    const modalLink = modalContainer.querySelector('.modal-link');
 
     certificateCards.forEach(function (card, index) {
         card.addEventListener('click', function () {
@@ -396,8 +396,8 @@ function setupCertificateModal() {
             modalTitle.textContent = certificate.title;
             modalDescription.textContent = certificate.description;
             modalImg.src = certificate.img;
-            modalLink.href = certificate.url; // Add this line
-            modalLink.style.display = 'block'; // Show the link
+            modalLink.href = certificate.url; 
+            modalLink.style.display = 'block'; 
 
             modalContainer.style.display = 'flex';
             overlay.style.display = 'block';
@@ -407,7 +407,7 @@ function setupCertificateModal() {
     window.closeCertificateModal = function () {
         modalContainer.style.display = 'none';
         overlay.style.display = 'none';
-        modalLink.style.display = 'none'; // Hide the link when modal is closed
+        modalLink.style.display = 'none'; 
     };
 
     overlay.addEventListener('click', function () {
@@ -422,7 +422,7 @@ function setupPortfolioModal() {
     const modalTitle = modalContainer.querySelector('.portfolio-modal-title');
     const modalDescription = modalContainer.querySelector('.portfolio-card-description');
     const modalImg = modalContainer.querySelector('.portfolio-modal-img');
-    const modalLink = modalContainer.querySelector('.portfolio-modal-link'); // Add this line
+    const modalLink = modalContainer.querySelector('.portfolio-modal-link'); 
 
     portfolioCards.forEach(function (card, index) {
         card.addEventListener('click', function () {
@@ -431,8 +431,8 @@ function setupPortfolioModal() {
             modalTitle.textContent = portfolio.title;
             modalDescription.textContent = portfolio.description;
             modalImg.src = portfolio.img;
-            modalLink.href = portfolio.url; // Add this line
-            modalLink.style.display = 'block'; // Show the link
+            modalLink.href = portfolio.url; 
+            modalLink.style.display = 'block'; 
 
             modalContainer.style.display = 'flex';
             overlay.style.display = 'block';
@@ -442,7 +442,7 @@ function setupPortfolioModal() {
     window.closePortfolioModal = function () {
         modalContainer.style.display = 'none';
         overlay.style.display = 'none';
-        modalLink.style.display = 'none'; // Hide the link when modal is closed
+        modalLink.style.display = 'none';
     };
 
     overlay.addEventListener('click', function () {
