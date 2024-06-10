@@ -172,18 +172,27 @@
     justify-content: space-around;
   }
 
-  .portfolio-modal-container {
-    border: 1px solid black;
-  }
-
   .portfolio-modal-image-container {
     border: 1px solid black;
   }
 
+  .portfolio-card {
+    border: 1px solid #000;
+  }
+
   .portfolio-modal-container {
-    height: auto;
     border: 1px solid black;
     z-index: 5;
+    width: 85%;
+    max-width: 700px;
+    max-height: 320px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    overflow: hidden;
   }
 
   .portfolio-modal-details {

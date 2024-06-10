@@ -221,6 +221,19 @@ body {
   color: #666;
 }
 
+.modal-link {
+  font-family: "Lexend", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  margin: 10px;
+  transition: color 0.3s ease;
+}
+
+.modal-link:hover {
+  text-decoration: underline;
+}
+
 #button-link {
   position: absolute;
   top: 80%;
@@ -398,6 +411,7 @@ body {
     flex: 0 0 auto;
     width: 180px;
     height: 220px;
+    border: 1px solid #000;
     max-width: calc(70%);
     margin-right: 15px;
   }
@@ -407,7 +421,7 @@ body {
     width: 90%;
     height: auto;
     margin: 10px;
-    border: 2px solid #000;
+    border: 1px solid #000;
     max-height: 200px;
     border-radius: 10px;
     max-width: 270px;
@@ -447,10 +461,50 @@ body {
     -webkit-box-orient: vertical;
   }
 
-  .modal-content,
   .modal-container {
-    height: auto;
-    border: 1px solid black;
+    width: 85%;
+    max-width: 700px;
+    height: 320px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    border: 2px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  .modal-content {
+    height: 100%;
+    overflow-y: auto;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: relative;
+    background-color: #f9f0df;
+    text-align: center;
+    border-radius: 15px;
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #000;
+    cursor: pointer;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close-modal:hover,
+  .close-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
   }
 
   .modal-details {

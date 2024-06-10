@@ -191,6 +191,18 @@ const aboutContent = {
 
 const portfolioContent = [
     {
+        title: "Story Master",
+        description: "Story Master is an Android app developed in Kotlin, integrating the Dicoding Story API to manage and share user stories.",
+        url: "https://github.com/Chlunidia/story-master.git",
+        img: "assets/portfolio/storymaster.png"
+    },
+    {
+        title: "GitHub User",
+        description: "GitHub User is an Android app developed in Kotlin, integrating the GitHub API to see and search GitHub user.",
+        url: "https://github.com/Chlunidia/github-api.git",
+        img: "assets/portfolio/github-api.png"
+    },
+    {
         title: "Omotrash",
         description: "I developed this application as my final project for the Multiplatform Programming course in 2023. This application serves as a solution for collecting sorted inorganic waste for recycling purposes. Users can utilize the app to gather recyclable waste generated from their consumption. They can submit details about the waste, including its recyclable nature and the pickup address. The application integrates Google Maps to facilitate locating the waste pickup points. The submitted data is displayed on the screen, accompanied by a button that directs the waste collector to the pickup location using Google Maps.",
         url: "https://github.com/Chlunidia/omotrash.git",
@@ -219,12 +231,6 @@ const portfolioContent = [
         description: "I created my own portfolio website with a visually appealing design, showcasing my skills, projects, and achievements in an organized and engaging manner.",
         url: "https://github.com/Chlunidia/myportfolio.git",
         img: "assets/portfolio/web.png"
-    },
-    {
-        title: "Story Master",
-        description: "Story Master is an Android app developed in Kotlin, integrating the Dicoding Story API to manage and share user stories.",
-        url: "https://github.com/Chlunidia/story-master.git",
-        img: "assets/portfolio/storymaster.png"
     }
 ];
 
@@ -422,7 +428,7 @@ function setupPortfolioModal() {
     const modalTitle = modalContainer.querySelector('.portfolio-modal-title');
     const modalDescription = modalContainer.querySelector('.portfolio-card-description');
     const modalImg = modalContainer.querySelector('.portfolio-modal-img');
-    const modalLink = modalContainer.querySelector('.portfolio-modal-link'); 
+    const modalLink = modalContainer.querySelector('.portfolio-modal-link');
 
     portfolioCards.forEach(function (card, index) {
         card.addEventListener('click', function () {
@@ -431,8 +437,8 @@ function setupPortfolioModal() {
             modalTitle.textContent = portfolio.title;
             modalDescription.textContent = portfolio.description;
             modalImg.src = portfolio.img;
-            modalLink.href = portfolio.url; 
-            modalLink.style.display = 'block'; 
+            modalLink.href = portfolio.url;
+            modalLink.style.display = 'block';
 
             modalContainer.style.display = 'flex';
             overlay.style.display = 'block';
