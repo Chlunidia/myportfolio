@@ -228,7 +228,6 @@ body {
   display: block;
   margin: 10px;
   z-index: 3;
-  pointer-events: auto;
   transition: color 0.3s ease;
 }
 
@@ -277,7 +276,6 @@ body {
   text-decoration: none;
   display: block;
   margin: 10px;
-  pointer-events: auto;
   transition: color 0.3s ease;
 }
 
