@@ -83,7 +83,6 @@ document.addEventListener('DOMContentLoaded', function () {
     loadAbout();
     loadPortfolio();
     loadContact();
-    setupModals();
 });
 
 const achievements = [
@@ -178,14 +177,13 @@ const aboutContent = {
         { title: "Laravel", percentage: 30 }
     ],
     experience: [
-        { title: "Mobile Development Cohort At Bangkit Academy 2024", place: "Bangkit Academy", date: "February 2024 - Present" },
+        { title: "Mobile Development Cohort At Bangkit Academy 2024", place: "Google, Gojek, Tokopedia, and Traveloka", date: "February 2024 - Present" },
         { title: "Database Implementation Course Assistant Lecturer", place: "Universitas Muhammadiyah Yogyakarta", date: "September 2023 - February 2024" },
-        { title: "Mobile Development Competition", place: "", date: "2022 - 2023" }
+        { title: "Mobile Development Competition", place: "National Competitions", date: "2022 - 2023" }
     ],
     education: [
-        { title: "Universitas Muhammadiyah Yogyakarta", details: "I am currently studying for a bachelor's degree in information technology...", date: "2021 - 2025 (Expected)" },
-        { title: "SMA Negeri Kebakkramat", details: "I completed my high school education at SMA Negeri Kebakkramat...", date: "2018 - 2021" },
-        { title: "SMP Negeri 1 Kebakkramat", details: "I completed my junior high school education at SMP Negeri 1 Kebakkramat...", date: "2015 - 2018" }
+        { title: "Universitas Muhammadiyah Yogyakarta", details: " I am a dedicated 6th-semester student specializing in mobile development with a focus on Kotlin. I have successfully achieved two medals in mobile development competitions. I seek to grow and apply my expertise to contribute meaningfully to advanced development projects.", date: "2021 - 2025 (Expected)" },
+        { title: "SMA Negeri Kebakkramat", details: "I completed my highschool in SMA Negeri 1 Kebakkramat.", date: "2018 - 2021" }
     ]
 };
 
@@ -207,6 +205,12 @@ const portfolioContent = [
         description: "I developed this application as my final project for the Multiplatform Programming course in 2023. This application serves as a solution for collecting sorted inorganic waste for recycling purposes. Users can utilize the app to gather recyclable waste generated from their consumption. They can submit details about the waste, including its recyclable nature and the pickup address. The application integrates Google Maps to facilitate locating the waste pickup points. The submitted data is displayed on the screen, accompanied by a button that directs the waste collector to the pickup location using Google Maps.",
         url: "https://github.com/Chlunidia/omotrash.git",
         img: "assets/portfolio/omotrash.png"
+    },
+    {
+        title: "Asclepius",
+        description: "Aclepius is an cancer detection Android app developed in Kotlin, integrating with machine learning to detect cancer.",
+        url: "https://github.com/Chlunidia/asclepius.git",
+        img: "assets/portfolio/aclepius.png"
     },
     {
         title: "AppSel",
@@ -234,10 +238,15 @@ const portfolioContent = [
     }
 ];
 
+document.addEventListener('DOMContentLoaded', function () {
+    setupSmoothScroll();
+});
+
 function loadAchievements() {
     const container = document.getElementById('home');
     const section = document.createElement('section');
     section.classList.add('section-2');
+    section.id = 'section-2';
     section.innerHTML = '<h1 class="section-title">Achievements</h1>';
     const sliderContainer = document.createElement('div');
     sliderContainer.classList.add('achievement-slider-container');
@@ -259,6 +268,19 @@ function loadAchievements() {
     sliderContainer.appendChild(slider);
     section.appendChild(sliderContainer);
     container.appendChild(section);
+}
+
+function setupSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
 }
 
 function loadCertificates() {

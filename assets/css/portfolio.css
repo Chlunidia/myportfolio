@@ -149,17 +149,16 @@
   color: #666;
 }
 
-.modal-link,
 .portfolio-modal-link {
   font-family: "Lexend", sans-serif;
   font-size: 14px;
   text-decoration: none;
+  pointer-events: auto;
   display: block;
   margin: 10px;
   transition: color 0.3s ease;
 }
 
-.modal-link:hover,
 .portfolio-modal-link:hover {
   text-decoration: underline;
 }
