@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
 const achievements = [
     {
         "title": "Certified Participant of Bangkit Academy 2024",
-        "description": "Successfully completed the Bangkit Academy program, a career readiness initiative supported by Google, Tokopedia, Gojek, and Traveloka, focusing on Mobile Development. The program included over 900 hours of intensive training in technical skills, soft skills, and English language proficiency.",
+        "description": "Successfully completed the Bangkit Academy program, a career readiness initiative supported by Google, Tokopedia, GoTo, and Traveloka, focusing on Mobile Development. The program included over 900 hours of intensive training in technical skills, soft skills, and English language proficiency.",
         "img": "assets/pictures/achievements/achievement5.jpg"
     },
     {
@@ -116,61 +116,61 @@ const achievements = [
 const certificates = [
     {
         title: "Belajar Pengembangan Aplikasi Android Intermediate",
-        description: "Completed the Intermediate Android Application Development course, enhancing my skills in creating robust Android applications as part of the Bangkit Academy 2024 Batch 1, led by Google, Gojek, Tokopedia, and Traveloka.",
+        description: "Completed the Intermediate Android Application Development course, enhancing my skills in creating robust Android applications. This certification is part of the Bangkit Academy 2024 Batch 1, a prestigious program led by Google, GoTo, Tokopedia, and Traveloka.",
         url: "https://www.dicoding.com/certificates/L4PQ1EW94XO1",
         img: "assets/pictures/certificates/certificate10.jpg"
     },
     {
         title: "Belajar Penerapan Machine Learning untuk Android",
-        description: "Received this certificate upon completing the course on implementing machine learning in Android applications as part of the Bangkit Academy 2024 Batch 1, led by Google, Gojek, Tokopedia, and Traveloka.",
+        description: "This certificate was awarded upon successful completion of a course focused on implementing machine learning in Android applications. The course is part of the Bangkit Academy 2024 Batch 1, led by Google, GoTo, Tokopedia, and Traveloka.",
         url: "https://www.dicoding.com/certificates/53XEO01KKZRN",
         img: "assets/pictures/certificates/certificate9.jpg"
     },
     {
         title: "Belajar Dasar AI",
-        description: "Completed the Basic AI course, providing a strong foundation in artificial intelligence concepts and applications as part of the Bangkit Academy 2024 Batch 1, led by Google, Gojek, Tokopedia, and Traveloka.",
+        description: "Completed the Basic AI course, which provided a strong foundation in artificial intelligence concepts and applications. This certification is part of the Bangkit Academy 2024 Batch 1, led by Google, GoTo, Tokopedia, and Traveloka.",
         url: "https://www.dicoding.com/certificates/QLZ9451JEP5D",
         img: "assets/pictures/certificates/certificate8.jpg"
     },
     {
         title: "Belajar Prinsip Pemrograman SOLID",
-        description: "Learned and applied the SOLID principles in programming, improving my ability to write maintainable and scalable code as part of the Bangkit Academy 2024 Batch 1, led by Google, Gojek, Tokopedia, and Traveloka.",
+        description: "Learned and applied the SOLID principles in programming, enhancing my ability to write maintainable and scalable code. This certification is part of the Bangkit Academy 2024 Batch 1, led by Google, GoTo, Tokopedia, and Traveloka.",
         url: "https://www.dicoding.com/certificates/GRX5Q8KEYZ0M",
         img: "assets/pictures/certificates/certificate7.jpg"
     },
     {
         title: "Belajar Fundamental Aplikasi Android",
-        description: "Completed the Fundamental Android Application Development course, gaining essential skills for Android development as part of the Bangkit Academy 2024 Batch 1, led by Google, Gojek, Tokopedia, and Traveloka.",
+        description: "Completed the Fundamental Android Application Development course, acquiring essential skills for Android development. This certification is part of the Bangkit Academy 2024 Batch 1, led by Google, GoTo, Tokopedia, and Traveloka.",
         url: "https://www.dicoding.com/certificates/JLX12NV85Z72",
         img: "assets/pictures/certificates/certificate6.jpg"
     },
     {
         title: "Belajar Membuat Aplikasi Android untuk Pemula",
-        description: "Completed the course on Creating Android Applications for Beginners, which introduced me to the basics of Android development as part of the Bangkit Academy 2024 Batch 1, led by Google, Gojek, Tokopedia, and Traveloka.",
+        description: "Completed the course on creating Android applications for beginners, which introduced the basics of Android development. This certification is part of the Bangkit Academy 2024 Batch 1, led by Google, GoTo, Tokopedia, and Traveloka.",
         url: "https://www.dicoding.com/certificates/4EXGKRMREZRL",
         img: "assets/pictures/certificates/certificate5.jpg"
     },
     {
         title: "Memulai Pemrograman dengan Kotlin",
-        description: "Received this certificate upon completing the IDCamp 2023 Android Developer path, focusing on starting programming with Kotlin.",
+        description: "Received this certificate upon completing the IDCamp 2023 Android Developer path, focusing on beginning programming with Kotlin.",
         url: "https://www.dicoding.com/certificates/6RPNVN6Q4Z2M",
         img: "assets/pictures/certificates/certificate4.jpg"
     },
     {
         title: "Belajar Dasar Git dengan GitHub",
-        description: "Learned the basics of Git and GitHub, improving my version control skills and collaboration in software development as part of the Bangkit Academy 2024 Batch 1, led by Google, Gojek, Tokopedia, and Traveloka.",
+        description: "Learned the basics of Git and GitHub, improving my version control skills and collaboration in software development. This certification is part of the Bangkit Academy 2024 Batch 1, led by Google, GoTo, Tokopedia, and Traveloka.",
         url: "https://www.dicoding.com/certificates/81P2V0OLQPOY",
         img: "assets/pictures/certificates/certificate3.jpg"
     },
     {
         title: "Pengenalan ke Logika Pemrograman (Programming Logic 101)",
-        description: "Completed the Programming Logic 101 course, which provided a solid understanding of programming logic and problem-solving techniques as part of the Bangkit Academy 2024 Batch 1, led by Google, Gojek, Tokopedia, and Traveloka.",
+        description: "Completed the Programming Logic 101 course, providing a solid understanding of programming logic and problem-solving techniques. This certification is part of the Bangkit Academy 2024 Batch 1, led by Google, GoTo, Tokopedia, and Traveloka.",
         url: "https://www.dicoding.com/certificates/1RXY1GW29PVM",
         img: "assets/pictures/certificates/certificate2.jpg"
     },
     {
         title: "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
-        description: "Completed the course on Basic Programming for Aspiring Software Developers, laying the groundwork for a career in software development as part of the Bangkit Academy 2024 Batch 1, led by Google, Gojek, Tokopedia, and Traveloka.",
+        description: "Completed the course on Basic Programming for Aspiring Software Developers, laying the groundwork for a career in software development. This certification is part of the Bangkit Academy 2024 Batch 1, led by Google, GoTo, Tokopedia, and Traveloka.",
         url: "https://www.dicoding.com/certificates/2VX3O9343ZYQ",
         img: "assets/pictures/certificates/certificate1.jpg"
     }
@@ -178,41 +178,87 @@ const certificates = [
 
 const aboutContent = {
     skills: [
-        { title: "Kotlin", percentage: 80 },
-        { title: "SQL", percentage: 75 },
-        { title: "HTML, CSS, JavaScript", percentage: 50 },
-        { title: "Flutter", percentage: 30 },
-        { title: "C#", percentage: 40 },
-        { title: "Java", percentage: 20 },
-        { title: "Laravel", percentage: 30 }
+        { 
+            title: "Kotlin", 
+            percentage: 80 
+        },
+        { 
+            title: "SQL", 
+            percentage: 75 
+        },
+        { 
+            title: "HTML, CSS, JavaScript", 
+            percentage: 50 
+        },
+        { 
+            title: "Flutter", 
+            percentage: 30 
+        },
+        { 
+            title: "C#", 
+            percentage: 40 
+        },
+        { 
+            title: "Java", 
+            percentage: 20 
+        },
+        { 
+            title: "Laravel", 
+            percentage: 30 
+        }
     ],
     experience: [
-        { title: "Mobile Development Cohort At Bangkit Academy 2024", place: "Google, Gojek, Tokopedia, and Traveloka", date: "February 2024 - Present" },
-        { title: "Database Implementation Course Assistant Lecturer", place: "Universitas Muhammadiyah Yogyakarta", date: "September 2023 - February 2024" },
-        { title: "Mobile Development Competition", place: "National Competitions", date: "2022 - 2023" }
+        { 
+            title: "Mobile Development Cohort At Bangkit Academy 2024", 
+            place: "As a participant in the Bangkit Academy 2024 Mobile Development Cohort, I have been immersed in an intensive program designed by industry leaders Google, GoTo, Tokopedia, and Traveloka. This program includes over 900 hours of rigorous training, covering essential technical skills, soft skills, and industry-relevant practices. I have been collaborating with top professionals and fellow participants to develop innovative mobile applications, enhancing my expertise and staying at the forefront of mobile technology.", 
+            date: "February 2024 - Present" 
+        },
+        { 
+            title: "Database Implementation Course Assistant Lecturer", 
+            place: "In my role as a Lecturer Assistant at Universitas Muhammadiyah Yogyakarta, I facilitated interactive learning sessions for over 40 students, significantly improving their engagement and participation. I guided weekly SQL exercises, which enhanced the students' practical database skills and overall performance. My contributions to teaching support boosted the students' understanding of complex database concepts, providing a richer educational experience.", 
+            date: "September 2023 - February 2024" 
+        },
+        { 
+            title: "Mobile Development Competition", 
+            place: "During 2022 and 2023, I actively participated in national-level mobile development competitions. These competitions provided a platform to showcase my technical skills and creativity in developing innovative mobile solutions. Working collaboratively with a team, I developed and presented various mobile applications that received recognition for their ingenuity and technical proficiency. These experiences honed my problem-solving abilities and reinforced my passion for mobile development.", 
+            date: "2022 - 2023" 
+        }
     ],
     education: [
-        { title: "Universitas Muhammadiyah Yogyakarta", details: " I am a dedicated 6th-semester student specializing in mobile development with a focus on Kotlin. I have successfully achieved two medals in mobile development competitions. I seek to grow and apply my expertise to contribute meaningfully to advanced development projects.", date: "2021 - 2025 (Expected)" },
-        { title: "SMA Negeri Kebakkramat", details: "I completed my highschool in SMA Negeri 1 Kebakkramat.", date: "2018 - 2021" }
+        { 
+            title: "Universitas Muhammadiyah Yogyakarta", 
+            details: " I am currently a dedicated 7th-semester student at Universitas Muhammadiyah Yogyakarta, specializing in mobile development with a particular focus on Kotlin. Throughout my academic journey, I have successfully achieved two medals in mobile development competitions, showcasing my proficiency and commitment to the field. I am eager to continue growing my expertise and applying my skills to contribute meaningfully to advanced development projects.", 
+            date: "2021 - 2025 (Expected)" 
+        },
+        { title: "SMA Negeri Kebakkramat", 
+            details: "I completed my high school education at SMA Negeri 1 Kebakkramat, where I laid a solid foundation for my future academic and professional pursuits. My time at SMA Negeri Kebakkramat equipped me with essential skills and knowledge, preparing me for my subsequent studies and achievements in higher education.", 
+            date: "2018 - 2021" 
+        }
     ]
 };
 
 const portfolioContent = [
     {
+        title: "Attirely",
+        description: "Attirelly is a mobile application that uses machine learning to classify clothing items and provide outfit recommendations. The app allows users to add images of their clothes, which are then analyzed and categorized. Users can also receive outfit suggestions based on their closet or manually search for outfit ideas.",
+        url: "https://github.com/Attirely",
+        img: "assets/portfolio/attirely.png"
+    },
+    {
         title: "Story Master",
-        description: "Story Master is an Android app developed in Kotlin, integrating the Dicoding Story API to manage and share user stories.",
+        description: "Story Master is an Android application developed in Kotlin that integrates the Dicoding Story API to manage and share user stories. This app provides a seamless experience for users to create and view stories within a community.",
         url: "https://github.com/Chlunidia/story-master.git",
         img: "assets/portfolio/storymaster.png"
     },
     {
         title: "GitHub User",
-        description: "GitHub User is an Android app developed in Kotlin, integrating the GitHub API to see and search GitHub user.",
+        description: "GitHub User is an Android app developed in Kotlin that utilizes the GitHub API to allow users to search for and view details about GitHub users. The app offers a user-friendly interface to explore profiles efficiently.",
         url: "https://github.com/Chlunidia/github-api.git",
         img: "assets/portfolio/github-api.png"
     },
     {
         title: "Omotrash",
-        description: "I developed this application as my final project for the Multiplatform Programming course in 2023. This application serves as a solution for collecting sorted inorganic waste for recycling purposes. Users can utilize the app to gather recyclable waste generated from their consumption. They can submit details about the waste, including its recyclable nature and the pickup address. The application integrates Google Maps to facilitate locating the waste pickup points. The submitted data is displayed on the screen, accompanied by a button that directs the waste collector to the pickup location using Google Maps.",
+        description: "Omotrash is an application developed as a final project for the Multiplatform Programming course in 2023. This app provides a solution for collecting sorted inorganic waste for recycling purposes. Users can input details about the waste and pickup address, and the app integrates Google Maps to locate waste pickup points. The data is displayed on the screen with a button directing the waste collector to the pickup location using Google Maps.",
         url: "https://github.com/Chlunidia/omotrash.git",
         img: "assets/portfolio/omotrash.png"
     },
@@ -224,27 +270,21 @@ const portfolioContent = [
     },
     {
         title: "AppSel",
-        description: "AppSel is a user interface (UI) application developed with the Flutter framework. I created this project to learn and practice Flutter development.",
+        description: "AppSel is a user interface (UI) application developed using the Flutter framework. This project was created to practice and enhance skills in Flutter development.",
         url: "https://github.com/Chlunidia/appsel.git",
         img: "assets/portfolio/appsel.png"
     },
     {
         title: "Pokedex",
-        description: "The Flutter Pokédex UI App presents a visually appealing and responsive user interface, allowing users to browse and search for Pokémon information efficiently. I created this project to learn and practice Flutter development.",
+        description: "Pokédex UI App is designed to provide a visually appealing interface for viewing Pokémon information. This project was developed to learn and practice Flutter development.",
         url: "https://github.com/Chlunidia/pokedex.git",
         img: "assets/portfolio/pokedex.png"
     },
     {
         title: "Scoreboard",
-        description: "A simple Flutter application, the Scoreboard efficiently calculates and displays scores for various sports and games, making it easy to keep track of points. I created this project to learn and practice Flutter development.",
+        description: "Scoreboard is a simple Flutter application that calculates and displays scores. The app provides an easy way to keep track of points, developed as a learning project for practicing Flutter development.",
         url: "https://github.com/Chlunidia/scoreboard.git",
         img: "assets/portfolio/scoreboard.png"
-    },
-    {
-        title: "Personal Website",
-        description: "I created my own portfolio website with a visually appealing design, showcasing my skills, projects, and achievements in an organized and engaging manner.",
-        url: "https://github.com/Chlunidia/myportfolio.git",
-        img: "assets/portfolio/web.png"
     }
 ];
 

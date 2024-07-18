@@ -411,7 +411,6 @@ body {
   .achievement-card {
     flex: 0 0 auto;
     width: 180px;
-    height: 220px;
     border: 1px solid #000;
     max-width: calc(70%);
     margin-right: 15px;
