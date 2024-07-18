@@ -87,6 +87,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const achievements = [
     {
+        "title": "Certified Participant of Bangkit Academy 2024",
+        "description": "Successfully completed the Bangkit Academy program, a career readiness initiative supported by Google, Tokopedia, Gojek, and Traveloka, focusing on Mobile Development. The program included over 900 hours of intensive training in technical skills, soft skills, and English language proficiency.",
+        "img": "assets/pictures/achievements/achievement5.jpg"
+    },
+    {
+        "title": "Certified Participant of MSIB (Magang dan Studi Independen Bersertifikat)",
+        "description": "Successfully completed the MSIB program under Kampus Merdeka, focusing on gaining practical experience and industry skills through internships and independent studies. The program included hands-on learning in a real-world professional environment, enhancing employability and career readiness.",
+        "img": "assets/pictures/achievements/achievement4.jpg"
+    },    
+    {
         title: "Gold Medal PKMM AST-PTMA",
         description: "Achieved the gold medal at the PKM Muhammadiyah 2023 (Program Kreativitas Mahasiswa) competition in the PKM-KC category (Program Kreativitas Mahasiswa Karsa Cipta) with the project titled 'Trashify: Ekosistem Masyarakat Sadar Pemilahan Sampah Menggunakan Aplikasi Berbasis Android dengan Menggunakan Algoritma Machine Learning'. I participated in this competition as part of a team with my two friends.",
         img: "assets/pictures/achievements/achievement3.jpg"
