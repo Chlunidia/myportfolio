@@ -245,7 +245,7 @@ const aboutContent = {
 const portfolioContent = [
     {
         title: "Attirely",
-        description: "Attirelly is a mobile application that uses machine learning to classify clothing items and provide outfit recommendations. The app allows users to add images of their clothes, which are then analyzed and categorized. Users can also receive outfit suggestions based on their closet or manually search for outfit ideas.",
+        description: "Attirely is the capstone project of my team at Bangkit Academy 2024, a program led by Google, GoTo, Tokopedia, and Traveloka under the Kampus Merdeka initiative. This mobile application leverages machine learning to classify clothing items and provide personalized outfit recommendations. The development of Attirely was a collaborative effort among team members specializing in mobile development, machine learning, and cloud computing. This project not only showcases our technical skills but also our ability to work together to create innovative solutions with real-world applications.",
         url: "https://github.com/Attirely",
         img: "assets/portfolio/attirely.png"
     },
