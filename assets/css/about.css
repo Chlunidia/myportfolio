@@ -1,6 +1,84 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@800&family=Titan+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@800&family=Titan+One&display=swap");
 
+/* About Me */
+.about-container {
+  padding: 10px;
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.description-outer-box {
+  border: 2px solid #000;
+  background-color: #f9f0df;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.description-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.description-content {
+  flex: 1;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.description-image {
+  flex: 0 0 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-card {
+  width: 100%;
+  border: 2px solid #000;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #f9f0df;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.description-section .section-title {
+  font-family: "Lexend", sans-serif;
+  font-size: 29px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.description-name {
+  font-family: "Lexend", sans-serif;
+  font-size: 22px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.description-title {
+  font-family: "Lexend", sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.description-text {
+  font-family: "Lexend", sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
 .skills-section {
   width: 100%;
   height: auto;
@@ -226,7 +304,7 @@ circle {
   top: 0;
   transform: translateX(-50%);
   background-image: linear-gradient(to bottom, #fdd23b, #f9f0df);
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 .edu-container ul li,
@@ -236,7 +314,7 @@ circle {
   padding: 15px 20px;
   background-color: #f9f0df;
   border-radius: 15px;
-  border: 1px solid black;
+  border: 2px solid black;
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.218);
   position: relative;
   margin-bottom: 30px;
@@ -255,7 +333,7 @@ circle {
   height: 25px;
   border-radius: 50%;
   background-color: #fdd23b;
-  border: 1px solid black;
+  border: 2px solid black;
   top: 0;
 
   display: grid;
@@ -289,7 +367,7 @@ circle {
   height: 35px;
   background-color: #e85c3b;
   border-radius: 15px;
-  border: 1px solid black;
+  border: 2px solid black;
   top: -45px;
   color: black;
   font-size: 12px;
@@ -307,7 +385,7 @@ circle {
   height: 35px;
   background-color: #e85c3b;
   border-radius: 15px;
-  border: 1px solid black;
+  border: 2px solid black;
   top: -45px;
   color: black;
   font-size: 12px;
@@ -348,7 +426,7 @@ circle {
 
 .edu-container ul li p,
 .experience-container ul li p {
-  font-size: 10px;
+  font-size: 12px;
   color: #666;
   font-family: "Lexend", sans-serif;
   line-height: 18px;
@@ -357,7 +435,7 @@ circle {
 .edu-title,
 .experience-title {
   font-family: "Lexend", sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   color: #333;
   margin-bottom: 10px;
@@ -378,5 +456,84 @@ circle {
 
   .education-section .section-title {
     font-size: 20px;
+  }
+
+  .edu-container ul li .edu-circle,
+  .experience-container ul li .experience-circle {
+    border: 1px solid #000;
+  }
+
+  .edu-container ul li,
+  .experience-container ul li {
+    border: 1px solid #000;
+  }
+
+  .edu-container ul::after,
+  .experience-container ul::after {
+    border: 1px solid #000;
+  }
+
+  .description-outer-box {
+    border: 1px solid #000;
+  }
+
+  .image-card {
+    border: 1px solid #000;
+  }
+
+  .edu-container ul li .edu-circle,
+  .experience-container ul li .experience-circle {
+    border: 1px solid #000;
+  }
+
+  .edu-container ul li .edu-date {
+    border: 1px solid #000;
+  }
+
+  .experience-container ul li .experience-date {
+    border: 1px solid #000;
+  }
+
+  .about-container {
+    padding: 10px;
+    margin-top: 90px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .description-outer-box {
+    border: 1px solid #000;
+  }
+
+  .description-section {
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .description-content {
+    padding-right: 0;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .description-image {
+    margin-top: 20px;
+    order: 2;
+  }
+
+  .description-name {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .description-title {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .description-text {
+    text-align: center;
+    font-size: 12px;
   }
 }

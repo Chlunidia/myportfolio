@@ -177,6 +177,11 @@ const certificates = [
 ];
 
 const aboutContent = {
+    aboutme: {
+        name: "Chlunidia Putri Kieswendha",
+        title: "IT Student",
+        description: "I am an IT student at Universitas Muhammadiyah Yogyakarta. I am currently on 7th semester. During my studies, I have shown a strong interest and skill in mobile technologies. I have participated in several mobile development competition. I am also proud to have received the Program Beasiswa Prestasi UMY for two years. This scholarship is awarded annually to students who perform well in their studies. It shows my commitment and hard work in my studies and projects. It shows my commitment in my studiess. I always want to learn more and improve in the field of technology. My goal is to use my skills and experiences to help with advanced development projects. I am excited to use my knowledge to solve real-world problems and work with other professionals to drive innovation."
+    },
     skills: [
         { 
             title: "Kotlin", 
@@ -345,6 +350,31 @@ function loadCertificates() {
 
 function loadAbout() {
     const container = document.getElementById('about');
+
+    const aboutContainer = document.createElement('div');
+    aboutContainer.classList.add('about-container');
+
+    const descriptionOuterBox = document.createElement('div');
+    descriptionOuterBox.classList.add('description-outer-box');
+    
+    const descriptionContainer = document.createElement('div');
+    descriptionContainer.classList.add('description-section');
+    descriptionContainer.innerHTML = `
+        <div class="description-content">
+            <p class="description-name">${aboutContent.aboutme.name}</p>
+            <p class="description-title">${aboutContent.aboutme.title}</p>
+            <p class="description-text">${aboutContent.aboutme.description}</p>
+        </div>
+        <div class="description-image">
+            <div class="image-card">
+                <img src="assets/images/aboutme.jpg" alt="${aboutContent.aboutme.name}">
+            </div>
+        </div>`;
+    descriptionOuterBox.appendChild(descriptionContainer);
+    aboutContainer.appendChild(descriptionOuterBox);
+    container.appendChild(aboutContainer);
+    container.appendChild(aboutContainer);
+
     const skillsContainer = document.createElement('div');
     skillsContainer.classList.add('skills-section');
     skillsContainer.innerHTML = '<h2 class="section-title">Skills</h2>';
@@ -373,6 +403,7 @@ function loadAbout() {
     });
     skillsContainer.appendChild(skillsInnerContainer);
     container.appendChild(skillsContainer);
+
     const experienceContainer = document.createElement('div');
     experienceContainer.classList.add('experience-section');
     experienceContainer.innerHTML = '<h2 class="section-title">Experience</h2>';
@@ -391,6 +422,7 @@ function loadAbout() {
     experienceInnerContainer.appendChild(experienceList);
     experienceContainer.appendChild(experienceInnerContainer);
     container.appendChild(experienceContainer);
+
     const educationContainer = document.createElement('div');
     educationContainer.classList.add('education-section');
     educationContainer.innerHTML = '<h2 class="section-title">Education</h2>';

@@ -11,7 +11,7 @@
 .contact-card {
   background-color: #f9f0df;
   padding: 40px;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   width: 200px;
   height: 220px;
@@ -30,7 +30,7 @@
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .contact-card h2 {
@@ -54,7 +54,7 @@
   margin-top: 20px;
   background-color: #f9f0df;
   padding: 20px 60px 20px 60px;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 380px;
   height: 350px;
