@@ -180,7 +180,7 @@ const aboutContent = {
     aboutme: {
         name: "Chlunidia Putri Kieswendha",
         title: "IT Student",
-        description: "I am an IT student at Universitas Muhammadiyah Yogyakarta. I am currently on 7th semester. During my studies, I have shown a strong interest and skill in mobile technologies. I have participated in several mobile development competition. I am also proud to have received the Program Beasiswa Prestasi UMY for two years. This scholarship is awarded annually to students who perform well in their studies. It shows my commitment and hard work in my studies and projects. It shows my commitment in my studiess. I always want to learn more and improve in the field of technology. My goal is to use my skills and experiences to help with advanced development projects. I am excited to use my knowledge to solve real-world problems and work with other professionals to drive innovation."
+        description: "I am an IT student at Universitas Muhammadiyah Yogyakarta. I am currently on 7th semester. My goal is to use my skills and experiences to help with advanced development projects. I am excited to use my knowledge to solve real-world problems and work with other professionals to drive innovation."
     },
     skills: [
         { 
@@ -215,28 +215,28 @@ const aboutContent = {
     experience: [
         { 
             title: "Mobile Development Cohort At Bangkit Academy 2024", 
-            place: "As a participant in the Bangkit Academy 2024 Mobile Development Cohort, I have been immersed in an intensive program designed by industry leaders Google, GoTo, Tokopedia, and Traveloka. This program includes over 900 hours of rigorous training, covering essential technical skills, soft skills, and industry-relevant practices. I have been collaborating with top professionals and fellow participants to develop innovative mobile applications, enhancing my expertise and staying at the forefront of mobile technology.", 
+            place: "This program includes over 900 hours of rigorous training, covering essential technical skills, soft skills, and industry-relevant practices.", 
             date: "February 2024 - Present" 
         },
         { 
             title: "Database Implementation Course Assistant Lecturer", 
-            place: "In my role as a Lecturer Assistant at Universitas Muhammadiyah Yogyakarta, I facilitated interactive learning sessions for over 40 students, significantly improving their engagement and participation. I guided weekly SQL exercises, which enhanced the students' practical database skills and overall performance. My contributions to teaching support boosted the students' understanding of complex database concepts, providing a richer educational experience.", 
+            place: "I facilitated interactive learning sessions for over 40 students, significantly improving their engagement and participation.", 
             date: "September 2023 - February 2024" 
         },
         { 
             title: "Mobile Development Competition", 
-            place: "During 2022 and 2023, I actively participated in national-level mobile development competitions. These competitions provided a platform to showcase my technical skills and creativity in developing innovative mobile solutions. Working collaboratively with a team, I developed and presented various mobile applications that received recognition for their ingenuity and technical proficiency. These experiences honed my problem-solving abilities and reinforced my passion for mobile development.", 
+            place: "During 2022 and 2023, I actively participated in national-level mobile development competitions.", 
             date: "2022 - 2023" 
         }
     ],
     education: [
         { 
             title: "Universitas Muhammadiyah Yogyakarta", 
-            details: " I am currently a dedicated 7th-semester student at Universitas Muhammadiyah Yogyakarta, specializing in mobile development with a particular focus on Kotlin. Throughout my academic journey, I have successfully achieved two medals in mobile development competitions, showcasing my proficiency and commitment to the field. I am eager to continue growing my expertise and applying my skills to contribute meaningfully to advanced development projects.", 
+            details: " I am currently a dedicated 7th-semester student at Universitas Muhammadiyah Yogyakarta, specializing in mobile development with a particular focus on Kotlin.", 
             date: "2021 - 2025 (Expected)" 
         },
         { title: "SMA Negeri Kebakkramat", 
-            details: "I completed my high school education at SMA Negeri 1 Kebakkramat, where I laid a solid foundation for my future academic and professional pursuits. My time at SMA Negeri Kebakkramat equipped me with essential skills and knowledge, preparing me for my subsequent studies and achievements in higher education.", 
+            details: "I completed my high school education at SMA Negeri 1 Kebakkramat, where I laid a solid foundation for my future academic and professional pursuits.", 
             date: "2018 - 2021" 
         }
     ]
