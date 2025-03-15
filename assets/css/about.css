@@ -149,7 +149,9 @@ svg {
 #number4,
 #number5,
 #number6,
-#number7 {
+#number7,
+#number8,
+#number9 {
   font-weight: 600;
   color: #555;
   font-size: 30px;
@@ -206,43 +208,64 @@ circle {
   animation: anim7 1s forwards;
   stroke: url(#GradientColor);
 }
+.circle8 {
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440; /* Start at 0% */
+  animation: anim8 1s forwards;
+  stroke: url(#GradientColor);
+}
+.circle9 {
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440; /* Start at 0% */
+  animation: anim9 1s forwards;
+  stroke: url(#GradientColor);
+}
 
 @keyframes anim1 {
   to {
-    stroke-dashoffset: 88; /* 80% */
+    stroke-dashoffset: 0; /* 100% - Git */
   }
 }
 @keyframes anim2 {
   to {
-    stroke-dashoffset: 110; /* 75% */
+    stroke-dashoffset: 44; /* 90% - Flutter */
   }
 }
 @keyframes anim3 {
   to {
-    stroke-dashoffset: 220; /* 50% */
+    stroke-dashoffset: 88; /* 80% - Kotlin */
   }
 }
 @keyframes anim4 {
   to {
-    stroke-dashoffset: 308; /* 30% */
+    stroke-dashoffset: 88; /* 80% - HTML, CSS, JavaScript */
   }
 }
 @keyframes anim5 {
   to {
-    stroke-dashoffset: 264; /* 40% */
+    stroke-dashoffset: 110; /* 75% - SQL */
   }
 }
 @keyframes anim6 {
   to {
-    stroke-dashoffset: 352; /* 20% */
+    stroke-dashoffset: 176; /* 60% - Laravel */
   }
 }
 @keyframes anim7 {
   to {
-    stroke-dashoffset: 308; /* 30% */
+    stroke-dashoffset: 220; /* 50% - Python */
   }
 }
-
+@keyframes anim8 {
+  to {
+    stroke-dashoffset: 264; /* 40% - C# */
+  }
+}
+@keyframes anim9 {
+  to {
+    stroke-dashoffset: 352; /* 20% - Java */
+  }
+}
 .education-section,
 .experience-section {
   width: 100%;

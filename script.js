@@ -46,7 +46,9 @@ document.addEventListener('DOMContentLoaded', function () {
         { id: 'number4', percentage: 30 },
         { id: 'number5', percentage: 40 },
         { id: 'number6', percentage: 20 },
-        { id: 'number7', percentage: 30 }
+        { id: 'number7', percentage: 30 },
+        { id: 'number8', percentage: 50 },
+        { id: 'number9', percentage: 100 }
     ];
     skills.forEach(skill => {
         let counter = 0;
@@ -87,28 +89,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const achievements = [
     {
-        "title": "Certified Participant of Bangkit Academy 2024",
-        "description": "Successfully completed the Bangkit Academy program, a career readiness initiative supported by Google, Tokopedia, GoTo, and Traveloka, focusing on Mobile Development. The program included over 900 hours of intensive training in technical skills, soft skills, and English language proficiency.",
-        "img": "assets/pictures/achievements/achievement5.jpg"
+        title: "Intern at CNN Indonesia",
+        description: "Successfully completed an internship at CNN Indonesia, contributing to the development of mobile and web applications for CNN Indonesia and other Transmedia companies. This experience provided hands-on exposure to software development and enhanced my technical expertise.",
+        img: "assets/pictures/achievements/achievement7.jpg"
     },
     {
-        "title": "Certified Participant of MSIB (Magang dan Studi Independen Bersertifikat)",
-        "description": "Successfully completed the MSIB program under Kampus Merdeka, focusing on gaining practical experience and industry skills through internships and independent studies. The program included hands-on learning in a real-world professional environment, enhancing employability and career readiness.",
-        "img": "assets/pictures/achievements/achievement4.jpg"
+        title: "Participant of MSIB Program (Magang dan Studi Independen Bersertifikat)",
+        description: "Completed the MSIB program under Kampus Merdeka, gaining practical industry experience through internships. The program offered hands-on learning in a professional setting, enhancing my technical skills and career readiness.",
+        img: "assets/pictures/achievements/achievement6.jpg"
+    },
+    {
+        title: "Graduate of Bangkit Academy 2024",
+        description: "Completed the Bangkit Academy program, a career readiness initiative supported by Google, Tokopedia, GoTo, and Traveloka, specializing in Mobile Development. The program included over 900 hours of intensive training in technical expertise, soft skills, and English proficiency.",
+        img: "assets/pictures/achievements/achievement5.jpg"
+    },
+    {
+        title: "Participant of MSIB Program (Magang dan Studi Independen Bersertifikat)",
+        description: "Completed the MSIB program under Kampus Merdeka, gaining hands-on experience in a professional environment through internships and independent studies. The program enhanced my industry skills and employability.",
+        img: "assets/pictures/achievements/achievement4.jpg"
     },    
     {
-        title: "Gold Medal PKMM AST-PTMA",
-        description: "Achieved the gold medal at the PKM Muhammadiyah 2023 (Program Kreativitas Mahasiswa) competition in the PKM-KC category (Program Kreativitas Mahasiswa Karsa Cipta) with the project titled 'Trashify: Ekosistem Masyarakat Sadar Pemilahan Sampah Menggunakan Aplikasi Berbasis Android dengan Menggunakan Algoritma Machine Learning'. I participated in this competition as part of a team with my two friends.",
+        title: "Gold Medalist - PKMM AST-PTMA 2023",
+        description: "Won a gold medal in the PKM Muhammadiyah 2023 (Program Kreativitas Mahasiswa) competition under the PKM-KC (Karsa Cipta) category with the project 'Trashify: A Community-Based Waste Sorting Ecosystem Using an Android Application and Machine Learning Algorithm.' I collaborated with two teammates to develop this project.",
         img: "assets/pictures/achievements/achievement3.jpg"
     },
     {
-        title: "Bronze Medal PKMM AST-PTMA",
-        description: "Achieved the bronze medal at the PKM Muhammadiyah 2023 (Program Kreativitas Mahasiswa) competition in the PKM-KC category (Program Kreativitas Mahasiswa Karsa Cipta) with the project titled 'Monitoring dan Pencatatan Konsultasi Dokter dan Pasien Berbasis Speech Recognition Untuk Mencegah Terjadinya Malapraktik'. I participated in this competition as part of a team with my two friends.",
+        title: "Bronze Medalist - PKMM AST-PTMA 2023",
+        description: "Won a bronze medal in the PKM Muhammadiyah 2023 (Program Kreativitas Mahasiswa) competition under the PKM-KC (Karsa Cipta) category with the project 'Speech Recognition-Based Doctor-Patient Consultation Monitoring System to Prevent Malpractice.' I worked on this project with two teammates.",
         img: "assets/pictures/achievements/achievement2.jpg"
     },
     {
-        title: "Participant of INVFEST 7.0 Competition",
-        description: "Received this certificate for participating in the INVFEST 7.0 software development competition. This was my first competition, and I participated as part of a team with two friends.",
+        title: "Participant - INVFEST 7.0 Competition",
+        description: "Earned a certificate for participating in the INVFEST 7.0 software development competition. This was my first competition, and I collaborated with two teammates.",
         img: "assets/pictures/achievements/achievement1.jpg"
     }
 ];
@@ -177,14 +189,22 @@ const certificates = [
 ];
 
 const aboutContent = {
-    aboutme: {
-        name: "Chlunidia Putri Kieswendha",
-        title: "IT Student",
-        description: "I am an IT student at Universitas Muhammadiyah Yogyakarta. I am currently on 7th semester. My goal is to use my skills and experiences to help with advanced development projects. I am excited to use my knowledge to solve real-world problems and work with other professionals to drive innovation."
-    },
+    // The aboutme section has been removed
     skills: [
         { 
+            title: "Git", 
+            percentage: 100 
+        },
+        { 
+            title: "Flutter", 
+            percentage: 90 
+        },
+        { 
             title: "Kotlin", 
+            percentage: 80 
+        },
+        { 
+            title: "HTML, CSS, JavaScript", 
             percentage: 80 
         },
         { 
@@ -192,12 +212,12 @@ const aboutContent = {
             percentage: 75 
         },
         { 
-            title: "HTML, CSS, JavaScript", 
-            percentage: 50 
+            title: "Laravel", 
+            percentage: 60 
         },
         { 
-            title: "Flutter", 
-            percentage: 30 
+            title: "Python", 
+            percentage: 50 
         },
         { 
             title: "C#", 
@@ -206,17 +226,18 @@ const aboutContent = {
         { 
             title: "Java", 
             percentage: 20 
-        },
-        { 
-            title: "Laravel", 
-            percentage: 30 
         }
     ],
     experience: [
+        {
+            title: "IT Software Developer Intern at CNN Indonesia",
+            place: "I developed mobile and web application not only for CNN Indonesia but also for another Transmedia.",
+            date: "September 2024 - December 2024"
+        },
         { 
-            title: "Mobile Development Cohort At Bangkit Academy 2024", 
+            title: "Mobile Development Cohort at Bangkit Academy 2024", 
             place: "This program includes over 900 hours of rigorous training, covering essential technical skills, soft skills, and industry-relevant practices.", 
-            date: "February 2024 - Present" 
+            date: "February 2024 - July 2024" 
         },
         { 
             title: "Database Implementation Course Assistant Lecturer", 
@@ -241,6 +262,104 @@ const aboutContent = {
         }
     ]
 };
+
+function loadAbout() {
+    const container = document.getElementById('about');
+
+    // Remove the aboutme section
+
+    // Skills section (kept as is)
+    const skillsContainer = document.createElement('div');
+    skillsContainer.classList.add('skills-section');
+    skillsContainer.innerHTML = '<h2 class="section-title">Skills</h2>';
+    const skillsInnerContainer = document.createElement('div');
+    skillsInnerContainer.classList.add('skills-container');
+
+    // Sort skills by percentage (highest to lowest)
+    const sortedSkills = [...aboutContent.skills].sort((a, b) => b.percentage - a.percentage);
+    
+    sortedSkills.forEach((skill, index) => {
+        const skillElement = document.createElement('div');
+        skillElement.classList.add('skill');
+        skillElement.innerHTML = `
+            <h2 class="skill-title">${skill.title}</h2>
+            <div class="outer">
+                <div class="inner">
+                    <div class="percentage" id="number${index + 1}">0%</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                        <defs>
+                            <linearGradient id="GradientColor">
+                                <stop offset="0%" stop-color="#25B418" />
+                                <stop offset="100%" stop-color="#269B1B" />
+                            </linearGradient>
+                        </defs>
+                        <circle class="circle${index + 1}" cx="80" cy="80" r="70" stroke-linecap="round" />
+                    </svg>
+                </div>
+            </div>`;
+        skillsInnerContainer.appendChild(skillElement);
+    });
+    
+    skillsContainer.appendChild(skillsInnerContainer);
+    container.appendChild(skillsContainer);
+
+    // Animate skill percentages
+    setTimeout(() => {
+        sortedSkills.forEach((skill, index) => {
+            // Animate percentage text
+            let counter = 0;
+            const finalPercentage = skill.percentage;
+            const interval = setInterval(() => {
+                if (counter >= finalPercentage) {
+                    clearInterval(interval);
+                } else {
+                    counter += 1;
+                    document.getElementById(`number${index + 1}`).innerHTML = `${counter}%`;
+                }
+            }, 15);
+        });
+    }, 500);
+
+    // Experience section (kept as is)
+    const experienceContainer = document.createElement('div');
+    experienceContainer.classList.add('experience-section');
+    experienceContainer.innerHTML = '<h2 class="section-title">Experience</h2>';
+    const experienceInnerContainer = document.createElement('div');
+    experienceInnerContainer.classList.add('experience-container');
+    const experienceList = document.createElement('ul');
+    aboutContent.experience.forEach(exp => {
+        const expElement = document.createElement('li');
+        expElement.innerHTML = `
+            <h3 class="experience-title">${exp.title}</h3>
+            <p>${exp.place}</p>
+            <span class="experience-circle"></span>
+            <span class="experience-date">${exp.date}</span>`;
+        experienceList.appendChild(expElement);
+    });
+    experienceInnerContainer.appendChild(experienceList);
+    experienceContainer.appendChild(experienceInnerContainer);
+    container.appendChild(experienceContainer);
+
+    // Education section (kept as is)
+    const educationContainer = document.createElement('div');
+    educationContainer.classList.add('education-section');
+    educationContainer.innerHTML = '<h2 class="section-title">Education</h2>';
+    const educationInnerContainer = document.createElement('div');
+    educationInnerContainer.classList.add('edu-container');
+    const educationList = document.createElement('ul');
+    aboutContent.education.forEach(edu => {
+        const eduElement = document.createElement('li');
+        eduElement.innerHTML = `
+            <h3 class="edu-title">${edu.title}</h3>
+            <p>${edu.details}</p>
+            <span class="edu-circle"></span>
+            <span class="edu-date">${edu.date}</span>`;
+        educationList.appendChild(eduElement);
+    });
+    educationInnerContainer.appendChild(educationList);
+    educationContainer.appendChild(educationInnerContainer);
+    container.appendChild(educationContainer);
+}
 
 const portfolioContent = [
     {
@@ -303,19 +422,37 @@ function loadAchievements() {
     sliderContainer.classList.add('achievement-slider-container');
     const slider = document.createElement('div');
     slider.classList.add('achievement-slider');
+    
     achievements.forEach(achievement => {
         const card = document.createElement('div');
         card.classList.add('achievement-card');
-        card.innerHTML = `
-            <div class="achievement-img-container">
-                <img class="achievement-img" src="${achievement.img}" alt="${achievement.title}">
-            </div>
-            <div class="achievement-details">
-                <h3 class="achievement-title">${achievement.title}</h3>
-                <p class="achievement-description">${achievement.description}</p>
-            </div>`;
+        
+        const imgContainer = document.createElement('div');
+        imgContainer.classList.add('achievement-img-container');
+        const img = document.createElement('img');
+        img.classList.add('achievement-img');
+        img.src = achievement.img;
+        img.alt = achievement.title;
+        imgContainer.appendChild(img);
+        
+        const details = document.createElement('div');
+        details.classList.add('achievement-details');
+        
+        const title = document.createElement('h3');
+        title.classList.add('achievement-title');
+        title.textContent = achievement.title;
+        
+        const description = document.createElement('p');
+        description.classList.add('achievement-description');
+        description.textContent = achievement.description;
+        
+        details.appendChild(title);
+        details.appendChild(description);
+        card.appendChild(imgContainer);
+        card.appendChild(details);
         slider.appendChild(card);
     });
+    
     sliderContainer.appendChild(slider);
     section.appendChild(sliderContainer);
     container.appendChild(section);
@@ -330,117 +467,45 @@ function loadCertificates() {
     sliderContainer.classList.add('certificate-slider-container');
     const slider = document.createElement('div');
     slider.classList.add('certificate-slider');
+    
     certificates.forEach(certificate => {
         const card = document.createElement('div');
         card.classList.add('certificate-card');
-        card.innerHTML = `
-            <div class="certificate-img-container">
-                <img class="certificate-img" src="${certificate.img}" alt="${certificate.title}">
-            </div>
-            <div class="certificate-details">
-                <h3 class="certificate-title">${certificate.title}</h3>
-                <p class="certificate-description">${certificate.description}</p>
-            </div>`;
+        
+        // Create image container
+        const imgContainer = document.createElement('div');
+        imgContainer.classList.add('certificate-img-container');
+        const img = document.createElement('img');
+        img.classList.add('certificate-img');
+        img.src = certificate.img;
+        img.alt = certificate.title;
+        imgContainer.appendChild(img);
+        
+        // Create details container
+        const details = document.createElement('div');
+        details.classList.add('certificate-details');
+        
+        // Create title with ellipsis
+        const title = document.createElement('h3');
+        title.classList.add('certificate-title');
+        title.textContent = certificate.title;
+        
+        // Create description with ellipsis
+        const description = document.createElement('p');
+        description.classList.add('certificate-description');
+        description.textContent = certificate.description;
+        
+        // Append elements
+        details.appendChild(title);
+        details.appendChild(description);
+        card.appendChild(imgContainer);
+        card.appendChild(details);
         slider.appendChild(card);
     });
+    
     sliderContainer.appendChild(slider);
     section.appendChild(sliderContainer);
     container.appendChild(section);
-}
-
-function loadAbout() {
-    const container = document.getElementById('about');
-
-    const aboutContainer = document.createElement('div');
-    aboutContainer.classList.add('about-container');
-
-    const descriptionOuterBox = document.createElement('div');
-    descriptionOuterBox.classList.add('description-outer-box');
-    
-    const descriptionContainer = document.createElement('div');
-    descriptionContainer.classList.add('description-section');
-    descriptionContainer.innerHTML = `
-        <div class="description-content">
-            <p class="description-name">${aboutContent.aboutme.name}</p>
-            <p class="description-title">${aboutContent.aboutme.title}</p>
-            <p class="description-text">${aboutContent.aboutme.description}</p>
-        </div>
-        <div class="description-image">
-            <div class="image-card">
-                <img src="assets/images/aboutme.jpg" alt="${aboutContent.aboutme.name}">
-            </div>
-        </div>`;
-    descriptionOuterBox.appendChild(descriptionContainer);
-    aboutContainer.appendChild(descriptionOuterBox);
-    container.appendChild(aboutContainer);
-    container.appendChild(aboutContainer);
-
-    const skillsContainer = document.createElement('div');
-    skillsContainer.classList.add('skills-section');
-    skillsContainer.innerHTML = '<h2 class="section-title">Skills</h2>';
-    const skillsInnerContainer = document.createElement('div');
-    skillsInnerContainer.classList.add('skills-container');
-    aboutContent.skills.forEach((skill, index) => {
-        const skillElement = document.createElement('div');
-        skillElement.classList.add('skill');
-        skillElement.innerHTML = `
-            <h2 class="skill-title">${skill.title}</h2>
-            <div class="outer">
-                <div class="inner">
-                    <div class="percentage" id="number-${index + 1}">${skill.percentage}%</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                        <defs>
-                            <linearGradient id="GradientColor">
-                                <stop offset="0%" stop-color="#25B418" />
-                                <stop offset="100%" stop-color="#269B1B" />
-                            </linearGradient>
-                        </defs>
-                        <circle class="circle${index + 1}" cx="80" cy="80" r="70" stroke-linecap="round" />
-                    </svg>
-                </div>
-            </div>`;
-        skillsInnerContainer.appendChild(skillElement);
-    });
-    skillsContainer.appendChild(skillsInnerContainer);
-    container.appendChild(skillsContainer);
-
-    const experienceContainer = document.createElement('div');
-    experienceContainer.classList.add('experience-section');
-    experienceContainer.innerHTML = '<h2 class="section-title">Experience</h2>';
-    const experienceInnerContainer = document.createElement('div');
-    experienceInnerContainer.classList.add('experience-container');
-    const experienceList = document.createElement('ul');
-    aboutContent.experience.forEach(exp => {
-        const expElement = document.createElement('li');
-        expElement.innerHTML = `
-            <h3 class="experience-title">${exp.title}</h3>
-            <p>${exp.place}</p>
-            <span class="experience-circle"></span>
-            <span class="experience-date">${exp.date}</span>`;
-        experienceList.appendChild(expElement);
-    });
-    experienceInnerContainer.appendChild(experienceList);
-    experienceContainer.appendChild(experienceInnerContainer);
-    container.appendChild(experienceContainer);
-
-    const educationContainer = document.createElement('div');
-    educationContainer.classList.add('education-section');
-    educationContainer.innerHTML = '<h2 class="section-title">Education</h2>';
-    const educationInnerContainer = document.createElement('div');
-    educationInnerContainer.classList.add('edu-container');
-    const educationList = document.createElement('ul');
-    aboutContent.education.forEach(edu => {
-        const eduElement = document.createElement('li');
-        eduElement.innerHTML = `
-            <h3 class="edu-title">${edu.title}</h3>
-            <p>${edu.details}</p>
-            <span class="edu-circle"></span>
-            <span class="edu-date">${edu.date}</span>`;
-        educationList.appendChild(eduElement);
-    });
-    educationInnerContainer.appendChild(educationList);
-    educationContainer.appendChild(educationInnerContainer);
-    container.appendChild(educationContainer);
 }
 
 function loadPortfolio() {
