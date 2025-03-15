@@ -38,31 +38,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    let skills = [
-        { id: 'number1', percentage: 80 },
-        { id: 'number2', percentage: 75 },
-        { id: 'number3', percentage: 50 },
-        { id: 'number4', percentage: 30 },
-        { id: 'number5', percentage: 40 },
-        { id: 'number6', percentage: 20 },
-        { id: 'number7', percentage: 30 },
-        { id: 'number8', percentage: 50 },
-        { id: 'number9', percentage: 100 }
-    ];
-    skills.forEach(skill => {
-        let counter = 0;
-        let interval = setInterval(() => {
-            if (counter == skill.percentage) {
-                clearInterval(interval);
-            } else {
-                counter += 1;
-                document.getElementById(skill.id).innerHTML = `${counter}%`;
-            }
-        }, 30);
-    });
-});
-
 function showSection(sectionId) {
     const sections = document.querySelectorAll('.section');
     sections.forEach(section => {
@@ -193,39 +168,57 @@ const aboutContent = {
     skills: [
         { 
             title: "Git", 
-            percentage: 100 
+            percentage: 100,
+            animationClass: "circle1",
+            numberId: "number1"
         },
         { 
             title: "Flutter", 
-            percentage: 90 
+            percentage: 90,
+            animationClass: "circle2",
+            numberId: "number2"
         },
         { 
             title: "Kotlin", 
-            percentage: 80 
+            percentage: 80,
+            animationClass: "circle3",
+            numberId: "number3"
         },
         { 
             title: "HTML, CSS, JavaScript", 
-            percentage: 80 
+            percentage: 80,
+            animationClass: "circle4",
+            numberId: "number4"
         },
         { 
             title: "SQL", 
-            percentage: 75 
+            percentage: 75,
+            animationClass: "circle5",
+            numberId: "number5"
         },
         { 
             title: "Laravel", 
-            percentage: 60 
+            percentage: 60,
+            animationClass: "circle6",
+            numberId: "number6"
         },
         { 
             title: "Python", 
-            percentage: 50 
+            percentage: 50,
+            animationClass: "circle7",
+            numberId: "number7"
         },
         { 
             title: "C#", 
-            percentage: 40 
+            percentage: 40,
+            animationClass: "circle8",
+            numberId: "number8"
         },
         { 
             title: "Java", 
-            percentage: 20 
+            percentage: 20,
+            animationClass: "circle9",
+            numberId: "number9"
         }
     ],
     experience: [
@@ -266,9 +259,7 @@ const aboutContent = {
 function loadAbout() {
     const container = document.getElementById('about');
 
-    // Remove the aboutme section
-
-    // Skills section (kept as is)
+    // Skills section
     const skillsContainer = document.createElement('div');
     skillsContainer.classList.add('skills-section');
     skillsContainer.innerHTML = '<h2 class="section-title">Skills</h2>';
@@ -278,14 +269,14 @@ function loadAbout() {
     // Sort skills by percentage (highest to lowest)
     const sortedSkills = [...aboutContent.skills].sort((a, b) => b.percentage - a.percentage);
     
-    sortedSkills.forEach((skill, index) => {
+    sortedSkills.forEach((skill) => {
         const skillElement = document.createElement('div');
         skillElement.classList.add('skill');
         skillElement.innerHTML = `
             <h2 class="skill-title">${skill.title}</h2>
             <div class="outer">
                 <div class="inner">
-                    <div class="percentage" id="number${index + 1}">0%</div>
+                    <div class="percentage" id="${skill.numberId}">0%</div>
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
                         <defs>
                             <linearGradient id="GradientColor">
@@ -293,7 +284,7 @@ function loadAbout() {
                                 <stop offset="100%" stop-color="#269B1B" />
                             </linearGradient>
                         </defs>
-                        <circle class="circle${index + 1}" cx="80" cy="80" r="70" stroke-linecap="round" />
+                        <circle class="${skill.animationClass}" cx="80" cy="80" r="70" stroke-linecap="round" />
                     </svg>
                 </div>
             </div>`;
@@ -305,7 +296,7 @@ function loadAbout() {
 
     // Animate skill percentages
     setTimeout(() => {
-        sortedSkills.forEach((skill, index) => {
+        sortedSkills.forEach((skill) => {
             // Animate percentage text
             let counter = 0;
             const finalPercentage = skill.percentage;
@@ -314,13 +305,13 @@ function loadAbout() {
                     clearInterval(interval);
                 } else {
                     counter += 1;
-                    document.getElementById(`number${index + 1}`).innerHTML = `${counter}%`;
+                    document.getElementById(skill.numberId).innerHTML = `${counter}%`;
                 }
             }, 15);
         });
     }, 500);
 
-    // Experience section (kept as is)
+    // Rest of the function remains unchanged
     const experienceContainer = document.createElement('div');
     experienceContainer.classList.add('experience-section');
     experienceContainer.innerHTML = '<h2 class="section-title">Experience</h2>';
