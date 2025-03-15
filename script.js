@@ -164,7 +164,6 @@ const certificates = [
 ];
 
 const aboutContent = {
-    // The aboutme section has been removed
     skills: [
         { 
             title: "Git", 
@@ -259,14 +258,12 @@ const aboutContent = {
 function loadAbout() {
     const container = document.getElementById('about');
 
-    // Skills section
     const skillsContainer = document.createElement('div');
     skillsContainer.classList.add('skills-section');
     skillsContainer.innerHTML = '<h2 class="section-title">Skills</h2>';
     const skillsInnerContainer = document.createElement('div');
     skillsInnerContainer.classList.add('skills-container');
 
-    // Sort skills by percentage (highest to lowest)
     const sortedSkills = [...aboutContent.skills].sort((a, b) => b.percentage - a.percentage);
     
     sortedSkills.forEach((skill) => {
@@ -294,10 +291,8 @@ function loadAbout() {
     skillsContainer.appendChild(skillsInnerContainer);
     container.appendChild(skillsContainer);
 
-    // Animate skill percentages
     setTimeout(() => {
         sortedSkills.forEach((skill) => {
-            // Animate percentage text
             let counter = 0;
             const finalPercentage = skill.percentage;
             const interval = setInterval(() => {
@@ -311,7 +306,6 @@ function loadAbout() {
         });
     }, 500);
 
-    // Rest of the function remains unchanged
     const experienceContainer = document.createElement('div');
     experienceContainer.classList.add('experience-section');
     experienceContainer.innerHTML = '<h2 class="section-title">Experience</h2>';
@@ -331,7 +325,6 @@ function loadAbout() {
     experienceContainer.appendChild(experienceInnerContainer);
     container.appendChild(experienceContainer);
 
-    // Education section (kept as is)
     const educationContainer = document.createElement('div');
     educationContainer.classList.add('education-section');
     educationContainer.innerHTML = '<h2 class="section-title">Education</h2>';
@@ -353,6 +346,18 @@ function loadAbout() {
 }
 
 const portfolioContent = [
+    {
+        "title": "Iqra",
+        "description": "Iqra is a mobile application developed using the Ionic framework for CTARSA Mosque. It serves as a comprehensive Islamic resource, featuring the Quran, daily prayers, dhikr, Tajweed learning videos, and other educational content to support worship and religious learning.",
+        "url": "",
+        "img": "assets/portfolio/iqra.png"
+    },
+    {
+        "title": "Quick Count Pilkada 2025 CNN Indonesia",
+        "description": "A web-based application built with Laravel for CNN Indonesia, designed to display real-time quick count results for the 2025 regional elections with accurate data visualization.",
+        "url": "https://quickcount.cnn.co.id/public/",
+        "img": "assets/portfolio/quick-count.png"
+    },    
     {
         title: "Attirely",
         description: "Attirely is the capstone project of my team at Bangkit Academy 2024, a program led by Google, GoTo, Tokopedia, and Traveloka under the Kampus Merdeka initiative. This mobile application leverages machine learning to classify clothing items and provide personalized outfit recommendations. The development of Attirely was a collaborative effort among team members specializing in mobile development, machine learning, and cloud computing. This project not only showcases our technical skills but also our ability to work together to create innovative solutions with real-world applications.",
@@ -389,18 +394,6 @@ const portfolioContent = [
         url: "https://github.com/Chlunidia/appsel.git",
         img: "assets/portfolio/appsel.png"
     },
-    {
-        title: "Pokedex",
-        description: "Pokédex UI App is designed to provide a visually appealing interface for viewing Pokémon information. This project was developed to learn and practice Flutter development.",
-        url: "https://github.com/Chlunidia/pokedex.git",
-        img: "assets/portfolio/pokedex.png"
-    },
-    {
-        title: "Scoreboard",
-        description: "Scoreboard is a simple Flutter application that calculates and displays scores. The app provides an easy way to keep track of points, developed as a learning project for practicing Flutter development.",
-        url: "https://github.com/Chlunidia/scoreboard.git",
-        img: "assets/portfolio/scoreboard.png"
-    }
 ];
 
 function loadAchievements() {
